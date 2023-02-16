@@ -7,6 +7,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/banner-rebajas-deskt-es-d2f05.webp",
+            "mobile_image": "shopify:\/\/shop_images\/banner-rebajas-mob-es-0eb78.jpg",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -24,6 +25,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/categoria-zapatos-de-mujer-zapatos-de-novia-6c8c1.webp",
+            "mobile_image": "shopify:\/\/shop_images\/categoria-zapatos-de-mujer-zapatos-de-novia-ae2f8.jpg",
             "heading": "Nueva Colección de Novia",
             "heading_size": "h1",
             "subheading": "Guapa y cómoda en tu día más especial",
@@ -41,6 +43,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/categoria-novedades-avance-coleccion-ss23-b53e8.webp",
+            "mobile_image": "shopify:\/\/shop_images\/categoria-novedades-avance-coleccion-ss23-4c8d6.jpg",
             "heading": "Avance Colección SS23",
             "heading_size": "h1",
             "subheading": "Nuevos modelos de la nueva colección",
