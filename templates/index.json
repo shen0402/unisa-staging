@@ -216,7 +216,7 @@
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 36,
-        "padding_bottom": 60
+        "padding_bottom": 100
       }
     },
     "image_banner": {
