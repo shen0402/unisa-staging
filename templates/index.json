@@ -28,7 +28,7 @@
             "heading": "Nueva Colección de Novia",
             "heading_size": "h1",
             "subheading": "Guapa y cómoda en tu día más especial",
-            "button_label": "Ver",
+            "button_label": "Ver >",
             "link": "#",
             "button_style_secondary": false,
             "box_align": "middle-right",
@@ -46,7 +46,7 @@
             "heading": "Avance Colección SS23",
             "heading_size": "h1",
             "subheading": "Nuevos modelos de la nueva colección",
-            "button_label": "Ver",
+            "button_label": "Ver >",
             "link": "#",
             "button_style_secondary": false,
             "box_align": "top-center",
@@ -92,7 +92,7 @@
         "template--18055965507895__a8cfb004-097e-4772-bf4d-684382106a74-167656655170f1f45d-2": {
           "type": "button",
           "settings": {
-            "button_label": "Novedades",
+            "button_label": "Novedades >",
             "button_link": "#",
             "button_style_secondary": false,
             "button_label_2": "",
@@ -162,7 +162,7 @@
         "template--18055965507895__0b2ceb2a-38a1-4732-914c-13a1d2226c6c-1676566800157272f9-2": {
           "type": "button",
           "settings": {
-            "button_label": "Did Thomas lend a helping hand?",
+            "button_label": "Did Thomas lend a helping hand? >",
             "button_link": "#"
           }
         }
@@ -195,7 +195,7 @@
             "image": "shopify:\/\/shop_images\/bloque-uploads-catalogo-20aw21-22-ok-20-1-pdf-3403a.webp",
             "title": "Colección Otoño-Invierno 2022",
             "text": "<p>Una colección concebida para que nada te pare en tu día a día, cuidando hasta el último detalle en cuanto a moda y comodidad.<\/p>",
-            "link_label": "Descarga catálogo",
+            "link_label": "Descarga catálogo >",
             "link": "https:\/\/www.unisa-europa.com\/uploads\/Catalogo_AW2223.pdf"
           }
         },
@@ -205,7 +205,7 @@
             "image": "shopify:\/\/shop_images\/categoria-zapatos-de-mujer-custom-3db8c.webp",
             "title": "Bota de goma personalizable",
             "text": "<p>Personaliza tu bota de goma con tu inicial o tu emoji preferido.<\/p>",
-            "link_label": "Descubrir",
+            "link_label": "Descubrir >",
             "link": "shopify:\/\/collections"
           }
         }
@@ -294,10 +294,10 @@
             "text": "<p>Sigue nuestro hashtag #myunisas y encuentra inspiración para combinar tus Unisas. Además podrás compartir tus looks con nosotros<\/p>"
           }
         },
-        "template--18055965507895__e24018ae-6d5b-447d-b488-a894bd7476e1-167656655170f1f45d-2": {
+        "80430181-4540-4c7a-9404-e843ae6d9557": {
           "type": "button",
           "settings": {
-            "button_label": "Echa un vistazo",
+            "button_label": "Echa un vistazo >",
             "button_link": "#",
             "button_style_secondary": false,
             "button_label_2": "",
@@ -309,7 +309,7 @@
       "block_order": [
         "template--18055965507895__e24018ae-6d5b-447d-b488-a894bd7476e1-167656655170f1f45d-0",
         "template--18055965507895__e24018ae-6d5b-447d-b488-a894bd7476e1-167656655170f1f45d-1",
-        "template--18055965507895__e24018ae-6d5b-447d-b488-a894bd7476e1-167656655170f1f45d-2"
+        "80430181-4540-4c7a-9404-e843ae6d9557"
       ],
       "settings": {
         "desktop_content_position": "center",
