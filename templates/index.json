@@ -186,33 +186,45 @@
         "padding_bottom": 36
       }
     },
-    "cb4dac9a-79d1-421b-8bd7-218eebc13005": {
-      "type": "collection-list",
+    "e702c8ff-2c21-4751-91ee-3bbfdecebfe3": {
+      "type": "multicolumn",
       "blocks": {
-        "template--18055965507895__cb4dac9a-79d1-421b-8bd7-218eebc13005-1676567403bbdd42c9-0": {
-          "type": "featured_collection",
+        "template--18055965507895__e702c8ff-2c21-4751-91ee-3bbfdecebfe3-16765689477e92c709-0": {
+          "type": "column",
           "settings": {
-            "collection": ""
+            "image": "shopify:\/\/shop_images\/bloque-uploads-catalogo-20aw21-22-ok-20-1-pdf-3403a.webp",
+            "title": "Colección Otoño-Invierno 2022",
+            "text": "<p>Una colección concebida para que nada te pare en tu día a día, cuidando hasta el último detalle en cuanto a moda y comodidad.<\/p>",
+            "link_label": "Descarga catálogo",
+            "link": "https:\/\/www.unisa-europa.com\/uploads\/Catalogo_AW2223.pdf"
           }
         },
-        "template--18055965507895__cb4dac9a-79d1-421b-8bd7-218eebc13005-1676567403bbdd42c9-1": {
-          "type": "featured_collection",
+        "template--18055965507895__e702c8ff-2c21-4751-91ee-3bbfdecebfe3-16765689477e92c709-1": {
+          "type": "column",
           "settings": {
-            "collection": ""
+            "image": "shopify:\/\/shop_images\/categoria-zapatos-de-mujer-custom-3db8c.webp",
+            "title": "Bota de goma personalizable",
+            "text": "<p>Personaliza tu bota de goma con tu inicial o tu emoji preferido.<\/p>",
+            "link_label": "Descubrir",
+            "link": "shopify:\/\/collections"
           }
         }
       },
       "block_order": [
-        "template--18055965507895__cb4dac9a-79d1-421b-8bd7-218eebc13005-1676567403bbdd42c9-0",
-        "template--18055965507895__cb4dac9a-79d1-421b-8bd7-218eebc13005-1676567403bbdd42c9-1"
+        "template--18055965507895__e702c8ff-2c21-4751-91ee-3bbfdecebfe3-16765689477e92c709-0",
+        "template--18055965507895__e702c8ff-2c21-4751-91ee-3bbfdecebfe3-16765689477e92c709-1"
       ],
       "settings": {
         "title": "",
         "heading_size": "h1",
-        "image_ratio": "square",
+        "image_width": "full",
+        "image_ratio": "adapt",
         "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
         "color_scheme": "background-1",
-        "show_view_all": false,
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 36,
@@ -314,7 +326,7 @@
     "a8cfb004-097e-4772-bf4d-684382106a74",
     "featured_collection",
     "0b2ceb2a-38a1-4732-914c-13a1d2226c6c",
-    "cb4dac9a-79d1-421b-8bd7-218eebc13005",
+    "e702c8ff-2c21-4751-91ee-3bbfdecebfe3",
     "image_banner",
     "e24018ae-6d5b-447d-b488-a894bd7476e1"
   ]
