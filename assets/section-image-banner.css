@@ -432,7 +432,3 @@
     justify-content: flex-end;
   }
 }
-
-.banner__box > * + .banner__buttons {
-  margin-top: 2rem;
-}

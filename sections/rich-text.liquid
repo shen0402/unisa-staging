@@ -51,7 +51,7 @@
                     {% else %}
                       href="{{ block.settings.button_link }}"
                     {% endif %}
-                    class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+                    class="link animate-arrow"
                   >
                     {{- block.settings.button_label | escape -}}
                   </a>
@@ -63,7 +63,7 @@
                     {% else %}
                       href="{{ block.settings.button_link_2 }}"
                     {% endif %}
-                    class="button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"
+                    class="link animate-arrow"
                   >
                     {{- block.settings.button_label_2 | escape -}}
                   </a>
@@ -303,12 +303,6 @@
           "label": "t:sections.rich-text.blocks.buttons.settings.button_link_1.label"
         },
         {
-          "type": "checkbox",
-          "id": "button_style_secondary",
-          "default": false,
-          "label": "t:sections.rich-text.blocks.buttons.settings.button_style_secondary_1.label"
-        },
-        {
           "type": "text",
           "id": "button_label_2",
           "label": "t:sections.rich-text.blocks.buttons.settings.button_label_2.label",
@@ -318,12 +312,6 @@
           "type": "url",
           "id": "button_link_2",
           "label": "t:sections.rich-text.blocks.buttons.settings.button_link_2.label"
-        },
-        {
-          "type": "checkbox",
-          "id": "button_style_secondary_2",
-          "default": false,
-          "label": "t:sections.rich-text.blocks.buttons.settings.button_style_secondary_2.label"
         }
       ]
     }
