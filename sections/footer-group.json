@@ -2,6 +2,40 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "db773099-9320-427e-9729-bf2c3e5393d9": {
+      "type": "newsletter",
+      "blocks": {
+        "sections--18055964786999__db773099-9320-427e-9729-bf2c3e5393d9-1676567865ff140c17-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Stay tuned, stay stylish",
+            "heading_size": "h1"
+          }
+        },
+        "sections--18055964786999__db773099-9320-427e-9729-bf2c3e5393d9-1676567865ff140c17-1": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>UNISA se hace responsable del tratamiento de tus datos, con la finalidad de atender tu solicitud de registro como cliente y gestionar los pedidos que realices y remitirte comunicaciones comerciales únicamente en el caso de que marques la casilla a tal fin. Tienes los derechos de acceso, rectificación, supresión, limitación, oposición al tratamiento y portabilidad de tus datos personales. Puedes ejercitar tus derechos en protecciondatos@unisa-europa.com. +info en nuestra Política de privacidad<\/p>"
+          }
+        },
+        "sections--18055964786999__db773099-9320-427e-9729-bf2c3e5393d9-1676567865ff140c17-2": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "sections--18055964786999__db773099-9320-427e-9729-bf2c3e5393d9-1676567865ff140c17-0",
+        "sections--18055964786999__db773099-9320-427e-9729-bf2c3e5393d9-1676567865ff140c17-1",
+        "sections--18055964786999__db773099-9320-427e-9729-bf2c3e5393d9-1676567865ff140c17-2"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "footer": {
       "type": "footer",
       "blocks": {
@@ -49,6 +83,7 @@
     }
   },
   "order": [
+    "db773099-9320-427e-9729-bf2c3e5393d9",
     "footer"
   ]
 }
