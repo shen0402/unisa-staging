@@ -59,7 +59,7 @@
   }
 
   .banner--large:not(.banner--mobile-bottom):not(.banner--adapt) .banner__content {
-    min-height: 39rem;
+    min-height: 48rem;
   }
 }
 
@@ -238,7 +238,7 @@
   display: flex;
   position: relative;
   width: 100%;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   z-index: 2;
 }
