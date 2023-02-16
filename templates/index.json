@@ -73,6 +73,48 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
+    "a8cfb004-097e-4772-bf4d-684382106a74": {
+      "type": "rich-text",
+      "blocks": {
+        "template--18055965507895__a8cfb004-097e-4772-bf4d-684382106a74-167656655170f1f45d-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>New in<\/p>",
+            "heading_size": "h0"
+          }
+        },
+        "template--18055965507895__a8cfb004-097e-4772-bf4d-684382106a74-167656655170f1f45d-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Tu Tienda de Zapatos Online, bolsos y complementos<\/p>"
+          }
+        },
+        "template--18055965507895__a8cfb004-097e-4772-bf4d-684382106a74-167656655170f1f45d-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Novedades",
+            "button_link": "#",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--18055965507895__a8cfb004-097e-4772-bf4d-684382106a74-167656655170f1f45d-0",
+        "template--18055965507895__a8cfb004-097e-4772-bf4d-684382106a74-167656655170f1f45d-1",
+        "template--18055965507895__a8cfb004-097e-4772-bf4d-684382106a74-167656655170f1f45d-2"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -149,6 +191,7 @@
   },
   "order": [
     "e15eee57-4508-4973-a65f-b947ec0d2847",
+    "a8cfb004-097e-4772-bf4d-684382106a74",
     "featured_collection",
     "image_banner"
   ]
