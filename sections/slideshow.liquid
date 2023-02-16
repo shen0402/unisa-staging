@@ -96,7 +96,17 @@
               loading: 'lazy',
               height: height,
               sizes: "100vw",
-              widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+              widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+              class: 'small-hide'
+            }}
+            {%- assign mobile_image = block.settings.mobile_image | default: block.settings.image -%}
+            {%- assign height = mobile_image.width | divided_by: mobile_image.aspect_ratio | round -%}
+            {{ mobile_image | image_url: width: 3840 | image_tag:
+              loading: 'lazy',
+              height: height,
+              sizes: "100vw",
+              widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+              class: 'large-up-hide medium-hide'
             }}
           {%- else -%}
             {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
@@ -286,6 +296,11 @@
           "type": "image_picker",
           "id": "image",
           "label": "t:sections.slideshow.blocks.slide.settings.image.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_image",
+          "label": "Mobile Image"
         },
         {
           "type": "text",

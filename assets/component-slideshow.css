@@ -108,7 +108,11 @@ slideshow-component .slideshow.banner {
 }
 
 .slideshow__controls {
-  border: 0.1rem solid rgba(var(--color-foreground), 0.08);
+  position: absolute !important;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  z-index: 3 !important;
 }
 
 .slideshow__controls--top {
@@ -209,4 +213,8 @@ slideshow-component:not(.page-width) .slider-buttons {
 
 .slideshow__text.banner__box * {
   color: #000000;
+}
+
+.slideshow__controls .slider-button {
+  display: none;
 }
