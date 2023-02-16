@@ -115,6 +115,50 @@
         "padding_bottom": 40
       }
     },
+    "0b2ceb2a-38a1-4732-914c-13a1d2226c6c": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--18055965507895__0b2ceb2a-38a1-4732-914c-13a1d2226c6c-1676566800157272f9-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Nuestras tiendas",
+            "heading_size": "h1"
+          }
+        },
+        "template--18055965507895__0b2ceb2a-38a1-4732-914c-13a1d2226c6c-1676566800157272f9-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>¿Quieres visitar cualquiera de nuestras tiendas? Te damos toda la información<\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--18055965507895__0b2ceb2a-38a1-4732-914c-13a1d2226c6c-1676566800157272f9-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Did Thomas lend a helping hand?",
+            "button_link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "template--18055965507895__0b2ceb2a-38a1-4732-914c-13a1d2226c6c-1676566800157272f9-0",
+        "template--18055965507895__0b2ceb2a-38a1-4732-914c-13a1d2226c6c-1676566800157272f9-1",
+        "template--18055965507895__0b2ceb2a-38a1-4732-914c-13a1d2226c6c-1676566800157272f9-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/shop.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "center",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -127,9 +171,9 @@
         "products_to_show": 8,
         "columns_desktop": 4,
         "full_width": false,
-        "show_view_all": true,
+        "show_view_all": false,
         "view_all_style": "solid",
-        "enable_desktop_slider": false,
+        "enable_desktop_slider": true,
         "color_scheme": "background-1",
         "image_ratio": "adapt",
         "show_secondary_image": true,
@@ -192,6 +236,7 @@
   "order": [
     "e15eee57-4508-4973-a65f-b947ec0d2847",
     "a8cfb004-097e-4772-bf4d-684382106a74",
+    "0b2ceb2a-38a1-4732-914c-13a1d2226c6c",
     "featured_collection",
     "image_banner"
   ]
