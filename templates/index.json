@@ -12,7 +12,6 @@
             "subheading": "",
             "button_label": "",
             "link": "",
-            "button_style_secondary": false,
             "box_align": "middle-center",
             "show_text_box": false,
             "text_alignment": "center",
@@ -30,7 +29,6 @@
             "subheading": "Guapa y cómoda en tu día más especial",
             "button_label": "Ver >",
             "link": "#",
-            "button_style_secondary": false,
             "box_align": "middle-right",
             "show_text_box": false,
             "text_alignment": "center",
@@ -48,7 +46,6 @@
             "subheading": "Nuevos modelos de la nueva colección",
             "button_label": "Ver >",
             "link": "#",
-            "button_style_secondary": false,
             "box_align": "top-center",
             "show_text_box": false,
             "text_alignment": "center",
@@ -65,12 +62,12 @@
       ],
       "settings": {
         "layout": "full_bleed",
-        "slide_height": "large",
+        "slide_height": "adapt_image",
         "slider_visual": "dots",
         "auto_rotate": true,
         "change_slides_speed": 5,
         "show_text_below": true,
-        "accessibility_info": "Slideshow about our brand"
+        "accessibility_info": ""
       }
     },
     "a8cfb004-097e-4772-bf4d-684382106a74": {
@@ -94,10 +91,8 @@
           "settings": {
             "button_label": "Novedades >",
             "button_link": "#",
-            "button_style_secondary": false,
             "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "button_link_2": ""
           }
         }
       },
@@ -253,10 +248,8 @@
           "settings": {
             "button_label_1": "Ir al personalizador >",
             "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": false,
             "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "button_link_2": ""
           }
         }
       },
@@ -299,10 +292,8 @@
           "settings": {
             "button_label": "Echa un vistazo >",
             "button_link": "#",
-            "button_style_secondary": false,
             "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "button_link_2": ""
           }
         }
       },
