@@ -13,5 +13,5 @@ if (document.querySelectorAll('.announcement-bar').length > 1) {
                 item.classList.remove('active');
             }
         });
-    }, 5000);
+    }, 8000);
 }

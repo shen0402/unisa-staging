@@ -2241,7 +2241,7 @@ product-info .loading-overlay:not(.hidden) ~ *,
 }
 
 .announcement-bar.active .announcement-bar__message {
-  animation: fadeIn 1s;
+  animation: fadeIn 2s;
 }
 
 @keyframes fadeIn {
