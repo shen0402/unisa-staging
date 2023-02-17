@@ -411,6 +411,10 @@
   word-break: break-word;
 }
 
+.image-banner .banner__buttons * {
+  color: #ffffff;
+}
+
 @media screen and (max-width: 749px) {
   .banner--content-align-mobile-right .banner__buttons--multiple {
     justify-content: flex-end;
