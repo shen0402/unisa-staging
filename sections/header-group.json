@@ -23,15 +23,23 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "Welcome to our store",
+            "text": "<p>Devoluciones gratuitas <a href=\"https:\/\/www.unisa-europa.com\/es-ES\/envio-devolucion\/\" target=\"_blank\" title=\"https:\/\/www.unisa-europa.com\/es-ES\/envio-devolucion\/\">+info<\/a><\/p>",
             "text_alignment": "center",
-            "color_scheme": "background-1",
-            "link": ""
+            "color_scheme": "accent-1"
+          }
+        },
+        "b4303f22-ce0c-45f4-8390-fb3aab361370": {
+          "type": "announcement",
+          "settings": {
+            "text": "<p>REBAJAS <a href=\"https:\/\/www.unisa-europa.com\/es-ES\/ultimo\/rebajas\/\" target=\"_blank\" title=\"https:\/\/www.unisa-europa.com\/es-ES\/ultimo\/rebajas\/\">Hasta -60% &gt;<\/a><\/p>",
+            "text_alignment": "center",
+            "color_scheme": "accent-1"
           }
         }
       },
       "block_order": [
-        "announcement-bar-0"
+        "announcement-bar-0",
+        "b4303f22-ce0c-45f4-8390-fb3aab361370"
       ],
       "settings": {
       }
