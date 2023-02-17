@@ -3059,3 +3059,11 @@ details-disclosure > details {
   background: #000000;
   position: absolute;
 }
+
+.scrolled-past-header .header__heading {
+  display: none;
+}
+
+.scrolled-past-header .header__inline-menu {
+  grid-area: heading;
+}
