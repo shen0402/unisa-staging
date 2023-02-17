@@ -267,11 +267,6 @@
     transition: transform var(--duration-long) ease;
     transform: scale(1.03);
   }
-
-  .underline-links-hover:hover a {
-    text-decoration: underline;
-    text-underline-offset: 0.3rem;
-  }
 }
 
 .card--standard.card--media .card__inner .card__information,

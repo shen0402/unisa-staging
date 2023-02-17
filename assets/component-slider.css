@@ -65,6 +65,13 @@ slider-component {
   }
 }
 
+.featured-collection .slider__slide {
+  --focus-outline-padding: 0;
+  --shadow-padding-top: 0;
+  --shadow-padding-bottom: 0;
+  scroll-snap-align: unset;
+}
+
 @media screen and (min-width: 750px) {
   .slider.slider--tablet-up {
     position: relative;
