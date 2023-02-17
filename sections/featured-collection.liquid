@@ -47,7 +47,7 @@
 -%}
 
 <div class="color-{{ section.settings.color_scheme }} isolate gradient">
-  <div class="collection section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width{% endif %}">
+  <div class="collection featured-collection section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width{% endif %}">
     <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">
       {%- if section.settings.title != blank -%}
         <h2 class="title {{ section.settings.heading_size }}">{{ section.settings.title | escape }}</h2>
@@ -107,11 +107,21 @@
           >
             {% render 'icon-caret' %}
           </button>
-          <div class="slider-counter caption">
-            <span class="slider-counter--current">1</span>
-            <span aria-hidden="true"> / </span>
-            <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
-            <span class="slider-counter--total">{{ products_to_display }}</span>
+          <div class="slider-counter slider-counter--dots">
+            {% assign dots_count = products_to_display | minus: section.settings.columns_desktop | plus: 1 %}
+            <div class="slideshow__control-wrapper slideshow__control-wrapper--{{ section.id }}">
+
+              {%- for i in (1..dots_count) -%}
+                <button class="slider-counter__link slider-counter__link--dots link" aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}" aria-controls="Slider-{{ section.id }}">
+                  <span class="dot"></span>
+                </button>
+              {%- endfor -%}
+            </div>
+            <style>
+              .slideshow__control-wrapper--{{ section.id }} .slider-counter__link {
+                width: calc(100% / {{ dots_count }});
+              }
+            </style>
           </div>
           <button
             type="button"

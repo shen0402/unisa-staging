@@ -73,6 +73,12 @@
     padding: 0 1.5rem;
     max-width: none;
   }
+
+  .featured-collection.collection--full-width {
+    width: 160rem;
+    margin: auto;
+    padding: 0 50px;
+  }
 }
 
 .collection__view-all a:not(.link) {

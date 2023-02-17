@@ -641,7 +641,7 @@ h6:empty {
   color: rgb(var(--color-link));
   background-color: transparent;
   font-size: 1.4rem;
-  font-family: inherit;
+  font-family: var(--font-body-family);;
 }
 
 .link--text {
@@ -698,6 +698,7 @@ hr {
   text-decoration: none;
   color: currentColor;
   display: block;
+  font-size: 14px;
 }
 
 .placeholder {
@@ -2994,4 +2995,20 @@ details-disclosure > details {
   .localization-form__select:focus {
     outline: transparent solid 1px;
   }
+}
+
+.rich-text__heading, .image-with-text__heading {
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.rich-text__heading::before , .image-with-text__heading::before {
+  content: "";
+  bottom: 0;
+  height: 2px !important;
+  width: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #000000;
+  position: absolute;
 }
