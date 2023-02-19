@@ -367,3 +367,8 @@
     row-gap: var(--grid-desktop-vertical-spacing);
   }
 }
+
+.image-with-text__text {
+  max-width: 30rem;
+  margin: 2rem auto 0;
+}

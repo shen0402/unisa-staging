@@ -85,3 +85,8 @@
 .rich-text__blocks.right .rich-text__buttons {
   justify-content: flex-end;
 }
+
+.rich-text__text {
+  max-width: 50rem;
+  margin: 2rem auto 0;
+}

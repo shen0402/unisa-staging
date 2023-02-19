@@ -436,3 +436,7 @@
     justify-content: flex-end;
   }
 }
+
+.banner__text {
+  max-width: 47rem;
+}
