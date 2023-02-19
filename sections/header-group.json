@@ -4,6 +4,36 @@
   "sections": {
     "header": {
       "type": "header",
+      "blocks": {
+        "1e9ce566-f8ff-431a-b9cc-297bcd9ec547": {
+          "type": "image_links",
+          "settings": {
+            "parent": "NEW IN",
+            "image1": "shopify:\/\/shop_images\/menu-avance-f1fb8.webp",
+            "caption1": "Avance Colección SS23",
+            "link1": "shopify:\/\/collections\/new",
+            "image2": "shopify:\/\/shop_images\/menu-rebajas-es-deskt-2a2d8.webp",
+            "caption2": "Hasta -60%",
+            "link2": "shopify:\/\/collections\/new"
+          }
+        },
+        "5edddf10-0110-4e12-9390-39c01b8b6b04": {
+          "type": "image_links",
+          "settings": {
+            "parent": "REBAJAS",
+            "image1": "shopify:\/\/shop_images\/menu-rebajas-es-deskt-2a2d8.webp",
+            "caption1": "Ver todo",
+            "link1": "shopify:\/\/collections\/new",
+            "image2": "shopify:\/\/shop_images\/menu-bolsossuaves-6eac5.webp",
+            "caption2": "Completa tu look",
+            "link2": "shopify:\/\/collections\/new"
+          }
+        }
+      },
+      "block_order": [
+        "1e9ce566-f8ff-431a-b9cc-297bcd9ec547",
+        "5edddf10-0110-4e12-9390-39c01b8b6b04"
+      ],
       "settings": {
         "color_scheme": "background-1",
         "logo_position": "top-center",
