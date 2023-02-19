@@ -273,46 +273,6 @@
         "stack_images_on_mobile": false,
         "show_text_below": true
       }
-    },
-    "e24018ae-6d5b-447d-b488-a894bd7476e1": {
-      "type": "rich-text",
-      "blocks": {
-        "template--18055965507895__e24018ae-6d5b-447d-b488-a894bd7476e1-167656655170f1f45d-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "<p>Encuentra inspiración <em>#myunisas<\/em><\/p>",
-            "heading_size": "h1"
-          }
-        },
-        "template--18055965507895__e24018ae-6d5b-447d-b488-a894bd7476e1-167656655170f1f45d-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Sigue nuestro hashtag #<em>myunisas<\/em> y encuentra inspiración para combinar tus Unisas. Además podrás compartir tus looks con nosotros<\/p>"
-          }
-        },
-        "80430181-4540-4c7a-9404-e843ae6d9557": {
-          "type": "button",
-          "settings": {
-            "button_label": "Echa un vistazo >",
-            "button_link": "#",
-            "button_label_2": "",
-            "button_link_2": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--18055965507895__e24018ae-6d5b-447d-b488-a894bd7476e1-167656655170f1f45d-0",
-        "template--18055965507895__e24018ae-6d5b-447d-b488-a894bd7476e1-167656655170f1f45d-1",
-        "80430181-4540-4c7a-9404-e843ae6d9557"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "background-1",
-        "full_width": false,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
     }
   },
   "order": [
@@ -321,7 +281,6 @@
     "featured_collection",
     "0b2ceb2a-38a1-4732-914c-13a1d2226c6c",
     "e702c8ff-2c21-4751-91ee-3bbfdecebfe3",
-    "image_banner",
-    "e24018ae-6d5b-447d-b488-a894bd7476e1"
+    "image_banner"
   ]
 }
