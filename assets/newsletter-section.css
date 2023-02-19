@@ -1,12 +1,17 @@
 .newsletter__wrapper {
-  padding-right: calc(4rem / var(--font-body-scale));
-  padding-left: calc(4rem / var(--font-body-scale));
+  max-width: 1660px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 @media screen and (min-width: 750px) {
   .newsletter__wrapper {
-    padding-right: 9rem;
-    padding-left: 9rem;
+    padding-right: 5rem;
+    padding-left: 5rem;
   }
 }
 
@@ -23,10 +28,13 @@
   margin-top: 3rem;
 }
 
-.newsletter__subheading {
-  max-width: 70rem;
-  margin-left: auto;
-  margin-right: auto;
+.newsletter__text {
+  width: 56%;
+}
+
+.newsletter__text + div {
+  width: 44%;
+  margin-top: 6rem;
 }
 
 .newsletter__wrapper .newsletter-form__field-wrapper {
@@ -46,5 +54,103 @@
   .newsletter__button {
     flex-shrink: 0;
     margin: 0 0 0 1rem;
+  }
+}
+
+.newsletter__heading {
+  margin: 0;
+}
+
+.newsletter__subheading {
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.newsletter__txt {
+  font-size: 11px;
+  margin-top: 20px;
+  padding-right: 6rem;
+}
+
+.newsletter__policy {
+  margin-top: 2rem;
+}
+
+.newsletter__policy input {
+  position: relative;
+  cursor: pointer;
+  width: 0px;
+  border: none;
+  height: auto;
+  margin: 0;
+}
+
+.newsletter__policy input:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 0;
+  left: 0px;
+  border: 1px solid black;
+  background-color: white;
+}
+
+.newsletter__policy input:checked:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 2px;
+  left: 2px;
+  background: black;
+}
+
+.newsletter__policy label {
+  padding-left: 2rem;
+  cursor: pointer;
+  line-height: 16px;
+}
+
+.newsletter-form, .newsletter__wrapper .newsletter-form__field-wrapper {
+  max-width: 100% !important;
+}
+
+.newsletter-form__field-wrapper .field__input {
+  font-size: 12px;
+  display: inline-block;
+  width: 70%;
+  border: none;
+  padding: 3px 0px;
+  height: auto;
+  border: none;
+}
+
+.field__input:focus {
+  box-shadow: none;
+}
+
+.newsletter-form__field-wrapper .field {
+  border-bottom: 1px solid #E1E1E1;
+  margin: 4px 0;
+}
+
+.newsletter-form__field-wrapper .field__input::placeholder {
+  opacity: 1;
+}
+
+@media (max-width: 749px) {
+  .newsletter__text, .newsletter__text + div {
+    width: 100%;
+  }
+
+  .newsletter__txt {
+    padding-right: 0;
+  }
+
+  .newsletter__text + div {
+    margin-top: 2rem;
   }
 }

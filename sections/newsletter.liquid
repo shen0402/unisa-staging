@@ -16,19 +16,27 @@
   }
 {%- endstyle -%}
 
-<div class="newsletter center {% if section.settings.full_width == false %}newsletter--narrow page-width{% endif %}">
+<div class="newsletter {% if section.settings.full_width == false %}newsletter--narrow page-width{% endif %}">
   <div class="newsletter__wrapper color-{{ section.settings.color_scheme }} gradient content-container isolate{% if section.settings.full_width %} content-container--full-width{% endif %} section-{{ section.id }}-padding">
+    <div class="newsletter__text">
     {%- for block in section.blocks -%}
       {%- case block.type -%}
         {%- when '@app' -%}
           {% render block %}
         {%- when 'heading' -%}
-          <h2 class="{{ block.settings.heading_size }}" {{ block.shopify_attributes }}>
+          <h2 class="{{ block.settings.heading_size }} newsletter__heading" {{ block.shopify_attributes }}>
             {{ block.settings.heading | escape }}
           </h2>
+        {%- when 'subheading' -%}
+          <div class="newsletter__subheading rte" {{ block.shopify_attributes }}>{{ block.settings.subheading }}</div>
         {%- when 'paragraph' -%}
-          <div class="newsletter__subheading rte" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
+          <div class="newsletter__txt rte" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
         {%- when 'email_form' -%}
+          <div class="newsletter__policy">
+            <input id="newsletter-policy" type="checkbox">
+            <label for="newsletter-policy">Acepto recibir ofertas y novedades por e-mail</label>
+          </div>
+          </div>
           <div {{ block.shopify_attributes }}>
             {% form 'customer', class: 'newsletter-form' %}
               <input type="hidden" name="contact[tags]" value="newsletter">
@@ -54,9 +62,6 @@
                     placeholder="{{ 'newsletter.label' | t }}"
                     required
                   >
-                  <label class="field__label" for="NewsletterForm--{{ section.id }}">
-                    {{ 'newsletter.label' | t }}
-                  </label>
                   <button
                     type="submit"
                     class="newsletter-form__button field__button"
@@ -64,7 +69,7 @@
                     id="Subscribe"
                     aria-label="{{ 'newsletter.button_label' | t }}"
                   >
-                    {% render 'icon-arrow' %}
+                  {{ 'newsletter.button_label' | t }}
                   </button>
                 </div>
                 {%- if form.errors -%}
@@ -200,8 +205,21 @@
       ]
     },
     {
+      "type": "subheading",
+      "name": "Subheading",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "subheading",
+          "default": "<p>Suscríbete a nuestra newsletter y disfruta de ventajas como ofertas especiales, descuentos y las últimas novedades.</p>",
+          "label": "Subheading"
+        }
+      ]
+    },
+    {
       "type": "paragraph",
-      "name": "t:sections.newsletter.blocks.paragraph.name",
+      "name": "Description",
       "limit": 1,
       "settings": [
         {
@@ -227,6 +245,9 @@
       "blocks": [
         {
           "type": "heading"
+        },
+        {
+          "type": "subheading"
         },
         {
           "type": "paragraph"

@@ -97,9 +97,6 @@
                       placeholder="{{ 'newsletter.label' | t }}"
                       required
                     >
-                    <label class="field__label" for="NewsletterForm--{{ section.id }}">
-                      {{ 'newsletter.label' | t }}
-                    </label>
                     <button
                       type="submit"
                       class="newsletter-form__button field__button"
@@ -107,7 +104,7 @@
                       id="Subscribe"
                       aria-label="{{ 'newsletter.button_label' | t }}"
                     >
-                      {% render 'icon-arrow' %}
+                    {{ 'newsletter.button_label' | t }}
                     </button>
                   </div>
                   {%- if form.errors -%}

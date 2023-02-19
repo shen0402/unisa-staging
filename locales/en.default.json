@@ -58,9 +58,9 @@
     }
   },
   "newsletter": {
-    "label": "Email",
+    "label": "Escribe tu e-mail aquí",
     "success": "Thanks for subscribing",
-    "button_label": "Subscribe"
+    "button_label": "Enviar"
   },
   "accessibility": {
     "skip_to_text": "Skip to content",
