@@ -271,7 +271,7 @@
         "color_scheme": "background-1",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
-        "show_text_below": false
+        "show_text_below": true
       }
     },
     "e24018ae-6d5b-447d-b488-a894bd7476e1": {
