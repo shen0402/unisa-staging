@@ -280,8 +280,8 @@
         "template--18055965507895__e24018ae-6d5b-447d-b488-a894bd7476e1-167656655170f1f45d-0": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Encuentra inspiración #myunisas<\/p>",
-            "heading_size": "h0"
+            "heading": "<p>Encuentra inspiración <em>#myunisas<\/em><\/p>",
+            "heading_size": "h1"
           }
         },
         "template--18055965507895__e24018ae-6d5b-447d-b488-a894bd7476e1-167656655170f1f45d-1": {
