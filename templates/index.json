@@ -108,7 +108,7 @@
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "background-1",
-        "full_width": true,
+        "full_width": false,
         "padding_top": 40,
         "padding_bottom": 40
       }
@@ -287,7 +287,7 @@
         "template--18055965507895__e24018ae-6d5b-447d-b488-a894bd7476e1-167656655170f1f45d-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Sigue nuestro hashtag #myunisas y encuentra inspiración para combinar tus Unisas. Además podrás compartir tus looks con nosotros<\/p>"
+            "text": "<p>Sigue nuestro hashtag #<em>myunisas<\/em> y encuentra inspiración para combinar tus Unisas. Además podrás compartir tus looks con nosotros<\/p>"
           }
         },
         "80430181-4540-4c7a-9404-e843ae6d9557": {
