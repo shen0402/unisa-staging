@@ -440,3 +440,23 @@
 .banner__text {
   max-width: 47rem;
 }
+
+@media (max-width: 749px) {
+  .image-banner .banner__heading {
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .image-banner .banner__box {
+    padding: 2rem;
+  }
+
+  .banner__box .banner__heading + * {
+    margin-top: 2rem;
+  }
+
+  .image-banner.banner--mobile-bottom .banner__buttons * {
+    color: #000000;
+    margin-top: 2rem;
+  }
+}

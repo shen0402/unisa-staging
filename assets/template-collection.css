@@ -75,7 +75,7 @@
   }
 
   .featured-collection.collection--full-width {
-    width: 160rem;
+    max-width: 160rem;
     margin: auto;
     padding: 0 50px;
   }
