@@ -660,3 +660,54 @@ noscript .localization-selector.link {
 .footer .page-width {
   max-width: 166rem;
 }
+
+/* .footer-block__contact-info  */
+
+.footer-block__contact-info-item {
+  display: flex;
+  align-items: center;
+}
+
+.footer-block__contact-info-icon {
+  max-width: 25px;
+}
+
+.footer-block__contact-info-icon svg {
+  width: 100%;
+  height: auto;
+}
+
+.footer-block__contact-info-text {
+  padding-left: 25px;
+  line-height: 20px;
+  font-size: 12px;
+}
+
+.footer-block__contact-info-text a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.footer-block__contact-info-text a:hover {
+  text-decoration: underline;
+}
+
+.footer-block__review * {
+  color: #000000;
+}
+
+.footer-block__review-score {
+  font-size: 16px;
+}
+
+.footer-block__review-description {
+  font-size: 14px;
+}
+
+.footer-block__contact-info .list-social {
+  justify-content: flex-start;
+}
+
+.footer-block__review-button .link {
+  font-size: 12px;
+}

@@ -131,6 +131,58 @@
                         {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
                       {%- endif -%}
                     </div>
+                    {%- when 'contact_info' %}
+                      <div class="footer-block__contact-info">
+                        {% if block.settings.phone_icon != blank and block.settings.phone_number != blank %}
+                          <div class="footer-block__contact-info-item">
+                            <div class="footer-block__contact-info-icon">
+                              {{ block.settings.phone_icon }}
+                            </div>
+                            <div class="footer-block__contact-info-text">{{ block.settings.phone_number }}</div>
+                          </div>
+                        {% endif %}
+                        {% if block.settings.email_icon != blank and block.settings.email_address != blank %}
+                          <div class="footer-block__contact-info-item">
+                            <div class="footer-block__contact-info-icon">
+                              {{ block.settings.email_icon }}
+                            </div>
+                            <div class="footer-block__contact-info-text">{{ block.settings.email_address }}</div>
+                          </div>
+                        {% endif %}
+
+                        {% if block.settings.social_heading != blank %}
+                          <h2 class="footer-block__social-heading">
+                            {{ block.settings.social_heading }}
+                          </h2>
+                        {% endif %}
+
+                        {% if block.settings.social_enable %}
+                          {%- render 'social-icons' -%}
+                        {% endif %}
+                      </div>
+                    {%- when 'review' %}
+                      <div class="footer-block__review">
+                        {% if block.settings.star != blank %}
+                          <div class="footer-block__review-star">
+                            {{ block.settings.star | img_url: '150x' | img_tag }}
+                          </div>
+                        {% endif %}
+                        {% if block.settings.score != blank %}
+                          <div class="footer-block__review-score">
+                            {{ block.settings.score }}
+                          </div>
+                        {% endif %}
+                        {% if block.settings.description != blank %}
+                        <div class="footer-block__review-description">
+                          {{ block.settings.description }}
+                        </div>
+                        {% endif %}
+                        {% if block.settings.button_label != blank and block.settings.button_link != blank %}
+                          <div class="footer-block__review-button">
+                            <a class="link animate-arrow" href="{{ block.settings.button_link }}">{{ block.settings.button_label }}</a>
+                          </div>
+                        {% endif %}
+                      </div>
                   {%- endcase -%}
               </div>
             {%- endfor -%}
