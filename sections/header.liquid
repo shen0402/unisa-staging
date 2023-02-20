@@ -33,7 +33,7 @@
   }
 
   .header__heading-logo {
-    max-width: {{ settings.logo_width }}px;
+    max-width: 150px;
   }
 
   {%- if section.settings.sticky_header_type == 'reduce-logo-size' -%}
@@ -45,6 +45,10 @@
   @media screen and (min-width: 990px) {
     header-drawer {
       display: none;
+    }
+
+    .header__heading-logo {
+      max-width: {{ settings.logo_width }}px;
     }
   }
 
@@ -86,8 +90,7 @@
 
 {%- style -%}
   .header {
-    padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+    padding: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px 2rem {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
   }
 
   .section-header {
@@ -103,8 +106,7 @@
 
   @media screen and (min-width: 990px) {
     .header {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
+      padding: {{ section.settings.padding_top }}px 2% {{ section.settings.padding_bottom }}px;
     }
   }
 {%- endstyle -%}
@@ -133,7 +135,7 @@
   </symbol>
 </svg>
 <{% if section.settings.sticky_header_type != 'none' %}sticky-header data-sticky-type="{{ section.settings.sticky_header_type }}"{% else %}div{% endif %} class="header-wrapper color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">
-  <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu != blank %} header--has-menu{% endif %}">
+  <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }}{% if section.settings.menu != blank %} header--has-menu{% endif %}">
     {%- if section.settings.menu != blank -%}
       <header-drawer data-breakpoint="tablet">
         <details id="Details-menu-drawer-container" class="menu-drawer-container">
@@ -154,15 +156,38 @@
                           <details id="Details-menu-drawer-menu-item-{{ forloop.index }}">
                             <summary class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.child_active %} menu-drawer__menu-item--active{% endif %}">
                               {{ link.title | escape }}
-                              {% render 'icon-arrow' %}
                               {% render 'icon-caret' %}
                             </summary>
                             <div id="link-{{ link.handle | escape }}" class="menu-drawer__submenu has-submenu gradient motion-reduce" tabindex="-1">
                               <div class="menu-drawer__inner-submenu">
-                                <button class="menu-drawer__close-button link link--text focus-inset" aria-expanded="true">
-                                  {% render 'icon-arrow' %}
-                                  {{ link.title | escape }}
-                                </button>
+                                {% assign link_title = link.title | handle %}
+                                {% for block in section.blocks %}
+                                  {% assign handle = block.settings.parent | handle %}
+                                  {% if link_title == handle %}
+                                    <div class="menu-drawer__menu image-menu">
+                                      {% if block.settings.image1 != blank and block.settings.link1 != blank %}
+                                        <a class="menu-drawer__image-item" href="{{ block.settings.link1 }}">
+                                          <div class="menu-drawer__image">
+                                            {{ block.settings.image1 | img_url: '390x' | img_tag }}
+                                          </div>
+                                          {% if block.settings.caption1 != blank %}
+                                            <span class="menu-drawer__caption">{{ block.settings.caption1 }}</span>
+                                          {% endif %}                                    
+                                        </a>
+                                      {% endif %}
+                                      {% if block.settings.image2 != blank and block.settings.link2 != blank %}
+                                        <a class="menu-drawer__image-item" href="{{ block.settings.link2 }}">
+                                          <div class="menu-drawer__image">
+                                            {{ block.settings.image2 | img_url: '390x' | img_tag }}
+                                          </div>
+                                          {% if block.settings.caption2 != blank %}
+                                            <span class="menu-drawer__caption">{{ block.settings.caption2 }}</span>
+                                          {% endif %}                                    
+                                        </a>
+                                      {% endif %}
+                                    </div>
+                                  {% endif %}
+                                {% endfor %}
                                 <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
                                   {%- for childlink in link.links -%}
                                     <li>
@@ -174,14 +199,9 @@
                                         <details id="Details-menu-drawer-submenu-{{ forloop.index }}">
                                           <summary class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
                                             {{ childlink.title | escape }}
-                                            {% render 'icon-arrow' %}
                                             {% render 'icon-caret' %}
                                           </summary>
                                           <div id="childlink-{{ childlink.handle | escape }}" class="menu-drawer__submenu has-submenu gradient motion-reduce">
-                                            <button class="menu-drawer__close-button link link--text focus-inset" aria-expanded="true">
-                                              {% render 'icon-arrow' %}
-                                              {{ childlink.title | escape }}
-                                            </button>
                                             <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
                                               {%- for grandchildlink in childlink.links -%}
                                                 <li>
@@ -474,7 +494,7 @@
                         <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
                       </summary>
                       <div id="MegaMenu-Content-{{ forloop.index }}" class="mega-menu__content gradient motion-reduce" tabindex="-1">
-                        <div class="page-width">
+                        <div class="mega-menu__wrapper">
                           <ul class="mega-menu__list{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}" role="list">
                             {%- for childlink in link.links -%}
                               <li>
@@ -503,7 +523,7 @@
                                 {% if block.settings.image1 != blank and block.settings.link1 != blank %}
                                   <a class="mega-menu__image-item" href="{{ block.settings.link1 }}">
                                     <div class="mega-menu__image">
-                                      {{ block.settings.image1 | img_url: '570' | img_tag }}
+                                      {{ block.settings.image1 | img_url: '390x' | img_tag }}
                                     </div>
                                     {% if block.settings.caption1 != blank %}
                                       <span class="mega-menu__caption">{{ block.settings.caption1 }}</span>
@@ -513,7 +533,7 @@
                                 {% if block.settings.image2 != blank and block.settings.link2 != blank %}
                                   <a class="mega-menu__image-item" href="{{ block.settings.link2 }}">
                                     <div class="mega-menu__image">
-                                      {{ block.settings.image2 | img_url: '570' | img_tag }}
+                                      {{ block.settings.image2 | img_url: '390x' | img_tag }}
                                     </div>
                                     {% if block.settings.caption2 != blank %}
                                       <span class="mega-menu__caption">{{ block.settings.caption2 }}</span>

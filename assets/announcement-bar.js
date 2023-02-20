@@ -5,7 +5,6 @@ if (document.querySelectorAll('.announcement-bar').length > 1) {
         if (count >= document.querySelectorAll('.announcement-bar').length) {
             count = 0;
         }
-        console.log(count);
         document.querySelectorAll('.announcement-bar').forEach((item, index) => {
             if (count == index) {
                 item.classList.add('active');
