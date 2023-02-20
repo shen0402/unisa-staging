@@ -1,4 +1,4 @@
-document.querySelectorAll('details summary').forEach(summary =>{
+document.querySelectorAll('header-menu details summary').forEach(summary =>{
     summary.addEventListener('mouseover', function(event){
       event.preventDefault();
       if(!event.target.closest('details').hasAttribute('open')) {
@@ -9,14 +9,16 @@ document.querySelectorAll('details summary').forEach(summary =>{
           }
         });
         this.click();
+        document.body.classList.add('megamenu-open');
       }
     });
 });
   
-document.querySelectorAll('.mega-menu__content').forEach(content => {
+document.querySelectorAll('header-menu .mega-menu__content').forEach(content => {
     content.addEventListener('mouseleave', function(event){
       event.preventDefault();
       event.target.closest('details').querySelector('summary').click();
+      document.body.classList.remove('megamenu-open');
     });
 });
   
@@ -29,6 +31,7 @@ document.querySelectorAll('.header__menu-item').forEach(item => {
             item.click();
           }
         });
+        document.body.classList.remove('megamenu-open');
       });
     }
 });
