@@ -67,9 +67,25 @@
           <div class="footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet {{ footer_grid_class }}">
             {%- for block in section.blocks -%}
               <div class="footer-block grid__item{% if block.type == 'link_list' %} footer-block--menu{% endif %}" {{ block.shopify_attributes }}>
-                {%- if block.settings.heading != blank -%}
-                  <h2 class="footer-block__heading">{{- block.settings.heading | escape -}}</h2>
-                {%- endif -%}
+                {% if block.type == 'review' %}
+                  <label class="footer-block__heading-review footer-block__heading" for="footer-block--{{ block.settings.heading | handle }}">
+                    {%- if block.settings.heading != blank -%}
+                      <h2 class="footer-block__heading">{{- block.settings.heading | escape -}}</h2>
+                    {%- endif -%}
+                    {% if block.settings.star != blank %}
+                      <div class="footer-block__review-star large-up-hide">
+                        {{ block.settings.star | img_url: '150x' | img_tag }}
+                      </div>
+                    {% endif %}
+                    <span class="icon large-up-hide">{% render 'icon-caret' %}
+                  </label>
+                  <input type="checkbox" id="footer-block--{{ block.settings.heading | handle }}">
+                {% else %}
+                  {%- if block.settings.heading != blank -%}
+                    <label class="footer-block__heading" for="footer-block--{{ block.settings.heading | handle }}">{{- block.settings.heading | escape -}}<span class="icon large-up-hide">{% render 'icon-caret' %}</span></label>
+                    <input type="checkbox" id="footer-block--{{ block.settings.heading | handle }}">
+                  {%- endif -%}
+                {% endif %}
 
                 {%- case block.type -%}
                   {%- when '@app' -%}
@@ -163,7 +179,7 @@
                     {%- when 'review' %}
                       <div class="footer-block__review">
                         {% if block.settings.star != blank %}
-                          <div class="footer-block__review-star">
+                          <div class="footer-block__review-star small-hide medium-hide">
                             {{ block.settings.star | img_url: '150x' | img_tag }}
                           </div>
                         {% endif %}
@@ -360,8 +376,7 @@
     </div>
     <div class="footer__content-bottom-wrapper page-width{% if section.settings.enable_country_selector == false and section.settings.enable_language_selector == false %} footer__content-bottom-wrapper--center{% endif %}">
       <div class="footer__copyright caption">
-        <small class="copyright__content">&copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: routes.root_url }}</small>
-        <small class="copyright__content">{{ powered_by_link }}</small>
+        <small class="copyright__content">&copy; {{ 'now' | date: "%Y" }} {{ shop.name | link_to: routes.root_url }}</small>
         {%- if section.settings.show_policy -%}
           <ul class="policies list-unstyled">
             {%- for policy in shop.policies -%}
