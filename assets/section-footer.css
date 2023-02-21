@@ -713,7 +713,7 @@ noscript .localization-selector.link {
 }
 
 .footer-block.footer-block--menu {
-  width: 50%;
+  width: 50% !important;
 }
 
 .footer-block__review-star {
