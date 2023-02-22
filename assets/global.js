@@ -1067,3 +1067,18 @@ class ProductRecommendations extends HTMLElement {
 }
 
 customElements.define('product-recommendations', ProductRecommendations);
+
+var scrollTopButton = document.getElementById('back-to-top');
+
+window.addEventListener('scroll', function(){
+  if (this.scrollY > 300) {
+    scrollTopButton.classList.add('show');
+  } else {
+    scrollTopButton.classList.remove('show');
+  }
+});
+
+scrollTopButton.addEventListener('click', function(e){
+  e.preventDefault();
+  window.scrollTo({top: 0, behavior: 'smooth'});
+});

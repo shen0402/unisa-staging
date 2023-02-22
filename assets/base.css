@@ -3109,3 +3109,32 @@ details-disclosure > details {
     display: block;
   }
 }
+
+#back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+  background: black;
+  border-radius: 20px;
+  z-index: 20;
+}
+#back-to-top.show {
+  display: block;
+  animation: fadeIn 2s;
+}
+
+#back-to-top .back-to-top-arrow {
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 4px;
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  top: 5px;
+  position: relative;
+  right: -8px;
+}
