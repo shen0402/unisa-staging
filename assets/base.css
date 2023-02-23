@@ -3076,7 +3076,7 @@ details-disclosure > details {
 }
 
 @media (min-width: 1440px) {
-  .scrolled-past-header .header__heading {
+  .scrolled-past-header .header__heading, .scrolled-past-header .header__heading-link {
     display: none;
   }
 
