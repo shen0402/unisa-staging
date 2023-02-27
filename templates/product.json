@@ -3,13 +3,6 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
         "title": {
           "type": "title",
           "settings": {
@@ -20,21 +13,16 @@
           "settings": {
           }
         },
-        "variant_picker": {
+        "a9c832fa-ad7b-4ebe-a010-54da643fc350": {
           "type": "variant_picker",
           "settings": {
             "picker_type": "button"
           }
         },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "settings": {
-          }
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": true
+            "show_dynamic_checkout": false
           }
         },
         "description": {
@@ -42,22 +30,63 @@
           "settings": {
           }
         },
-        "share": {
-          "type": "share",
+        "1c9c74ee-e123-4cbd-8ebd-7f07ab4cbcf5": {
+          "type": "collapsible_tab",
           "settings": {
-            "share_label": "Share"
+            "heading": "Composición",
+            "icon": "none",
+            "content": "<p>Altura plataforma: 2,5 cm<br\/>Altura tacón: 4 cm<br\/>Material exterior: Piel <a href=\"#\" title=\"#\"><strong>+info<\/strong><\/a><br\/>Material interior: Piel\/Tejido<br\/>Puntera: Redonda<br\/>Suela: Sintético antideslizante<br\/>Color: HOLM (Verde)<\/p>",
+            "page": ""
+          }
+        },
+        "69a724df-dbad-41a6-a9b7-2cbb01d12f82": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Envíos",
+            "icon": "none",
+            "content": "<p>Envío Estándar: 2 días laborables<br\/>Envío Express: 24 horas<br\/><br\/>Puedes consultar los gastos de envío en la siguiente tabla: <a href=\"#\" title=\"#\">Consúltalo aquí.<\/a><br\/><br\/>En cualquier caso, durante el proceso de compra y antes de realizar el pago te detallamos los gastos de envío.<br\/><br\/>Nuestro compromiso con el planeta también está presente en nuestros envíos. Todas las cajas de nuestros pedidos son de cartón 100% reciclado y reutilizable. Unisa ❤ the planet<br\/><br\/>*Para Canarias, Ceuta y Melilla consulta las opciones de envío<\/p>",
+            "page": ""
+          }
+        },
+        "6754b924-16c2-45bb-9c7a-f5a437faf03c": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Devoluciones",
+            "icon": "none",
+            "content": "<p>Tranquila\/o, si no estás satisfecha\/o puedes devolver tus Unisas sin coste alguno (siempre que el producto no esté usado o dañado). El plazo de devolución es de 30 días. (<a href=\"#\" title=\"#\">Más información<\/a>)<br\/><br\/>Si quieres devolver recuerda conservar la caja en la que te enviamos tu pedido. Todos nuestros envases son ecológicos y reutilizables. Unisa ❤ <em>the planet<\/em><br\/><br\/>*Para Canarias, Ceuta, Melilla consulta las opciones de devolución.<\/p>",
+            "page": ""
+          }
+        },
+        "2ac9d315-ea7f-4e7f-8cac-8d490c550874": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "¿necesitas ayuda?",
+            "icon": "none",
+            "content": "<p>Para cualquier duda puedes consultar nuestras<a href=\"#\" title=\"#\"> preguntas frecuentes<\/a>.Si necesitas contactar con nosotros, puedes enviarnos un e-mail a <a href=\"mailto:shoponline@unisa-europa.com\" title=\"mailto:shoponline@unisa-europa.com\">shoponline@unisa-europa.com<\/a> o llamarnos gratis al <a href=\"tel:900400440\" title=\"tel:900400440\">900 400 440<\/a><\/p>",
+            "page": ""
+          }
+        },
+        "f6b57835-c388-45b7-a5ae-f4d37c63905d": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Compartir",
+            "icon": "apple",
+            "content": "",
+            "page": ""
           }
         }
       },
       "block_order": [
-        "vendor",
         "title",
         "price",
-        "variant_picker",
-        "quantity_selector",
+        "a9c832fa-ad7b-4ebe-a010-54da643fc350",
         "buy_buttons",
         "description",
-        "share"
+        "1c9c74ee-e123-4cbd-8ebd-7f07ab4cbcf5",
+        "69a724df-dbad-41a6-a9b7-2cbb01d12f82",
+        "6754b924-16c2-45bb-9c7a-f5a437faf03c",
+        "2ac9d315-ea7f-4e7f-8cac-8d490c550874",
+        "f6b57835-c388-45b7-a5ae-f4d37c63905d"
       ],
       "settings": {
         "enable_sticky_info": true,
