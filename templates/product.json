@@ -70,7 +70,7 @@
           "type": "collapsible_tab",
           "settings": {
             "heading": "Compartir",
-            "icon": "apple",
+            "icon": "none",
             "content": "",
             "page": ""
           }
