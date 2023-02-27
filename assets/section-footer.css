@@ -461,7 +461,7 @@ noscript .localization-selector.link {
 
 .footer-block__details-content .list-menu__item--link,
 .copyright__content a {
-  color: var(--color-foreground);
+  color: rgba(var(--color-foreground), 1);
   font-weight: normal;
   font-size: 12px;
   text-transform: none;
