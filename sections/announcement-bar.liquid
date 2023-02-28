@@ -1,92 +1,94 @@
-{%- for block in section.blocks -%}
-  {%- case block.type -%}
-    {%- when 'announcement' -%}
-      <div class="announcement-bar {% if forloop.first %}active{% endif %} color-{{ block.settings.color_scheme }} gradient" role="region" aria-label="{{ 'sections.header.announcement' | t }}" {{ block.shopify_attributes }}>
+{% if template.name == 'index' %}
+  {%- for block in section.blocks -%}
+    {%- case block.type -%}
+      {%- when 'announcement' -%}
+      <div
+        class="announcement-bar {% if forloop.first %}active{% endif %} color-{{ block.settings.color_scheme }} gradient"
+        role="region"
+        aria-label="{{ 'sections.header.announcement' | t }}"
+        {{ block.shopify_attributes }}>
         {%- if block.settings.text != blank -%}
-              <div class="page-width">
-                <div class="announcement-bar__message {{ block.settings.text_alignment }} h5">
-                  {{ block.settings.text }}
-                </div>
-              </div>
+          <div class="page-width">
+            <div class="announcement-bar__message {{ block.settings.text_alignment }} h5">
+              {{ block.settings.text }}
+            </div>
+          </div>
         {%- endif -%}
       </div>
-  {%- endcase -%}
-{%- endfor -%}
+    {%- endcase -%}
+  {%- endfor -%}
+{% endif %}
+
 <script src="{{ 'announcement-bar.js' | asset_url }}" defer="defer"></script>
 
 {% schema %}
-{
-  "name": "t:sections.announcement-bar.name",
-  "max_blocks": 12,
-  "class": "announcement-bar-section",
-  "blocks": [
-    {
-      "type": "announcement",
-      "name": "t:sections.announcement-bar.blocks.announcement.name",
-      "settings": [
+  {
+    "name": "t:sections.announcement-bar.name",
+    "max_blocks": 12,
+    "class": "announcement-bar-section",
+    "blocks": [
+      {
+        "type": "announcement",
+        "name": "t:sections.announcement-bar.blocks.announcement.name",
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "text",
+            "default": "<p>Welcome to our store</p>",
+            "label": "t:sections.announcement-bar.blocks.announcement.settings.text.label"
+          }, {
+            "type": "select",
+            "id": "text_alignment",
+            "options": [
+              {
+                "value": "left",
+                "label": "t:sections.announcement-bar.blocks.announcement.settings.text_alignment.options__1.label"
+              }, {
+                "value": "center",
+                "label": "t:sections.announcement-bar.blocks.announcement.settings.text_alignment.options__2.label"
+              }, {
+                "value": "right",
+                "label": "t:sections.announcement-bar.blocks.announcement.settings.text_alignment.options__3.label"
+              }
+            ],
+            "default": "center",
+            "label": "t:sections.announcement-bar.blocks.announcement.settings.text_alignment.label"
+          }, {
+            "type": "select",
+            "id": "color_scheme",
+            "options": [
+              {
+                "value": "accent-1",
+                "label": "t:sections.all.colors.accent_1.label"
+              },
+              {
+                "value": "accent-2",
+                "label": "t:sections.all.colors.accent_2.label"
+              },
+              {
+                "value": "background-1",
+                "label": "t:sections.all.colors.background_1.label"
+              },
+              {
+                "value": "background-2",
+                "label": "t:sections.all.colors.background_2.label"
+              }, {
+                "value": "inverse",
+                "label": "t:sections.all.colors.inverse.label"
+              }
+            ],
+            "default": "accent-1",
+            "label": "t:sections.all.colors.label"
+          }
+        ]
+      }
+    ],
+    "default": {
+      "blocks": [
         {
-          "type": "richtext",
-          "id": "text",
-          "default": "<p>Welcome to our store</p>",
-          "label": "t:sections.announcement-bar.blocks.announcement.settings.text.label"
-        },
-        {
-          "type": "select",
-          "id": "text_alignment",
-          "options": [
-            {
-              "value": "left",
-              "label": "t:sections.announcement-bar.blocks.announcement.settings.text_alignment.options__1.label"
-            },
-            {
-              "value": "center",
-              "label": "t:sections.announcement-bar.blocks.announcement.settings.text_alignment.options__2.label"
-            },
-            {
-              "value": "right",
-              "label": "t:sections.announcement-bar.blocks.announcement.settings.text_alignment.options__3.label"
-            }
-          ],
-          "default": "center",
-          "label": "t:sections.announcement-bar.blocks.announcement.settings.text_alignment.label"
-        },
-        {
-          "type": "select",
-          "id": "color_scheme",
-          "options": [
-            {
-              "value": "accent-1",
-              "label": "t:sections.all.colors.accent_1.label"
-            },
-            {
-              "value": "accent-2",
-              "label": "t:sections.all.colors.accent_2.label"
-            },
-            {
-              "value": "background-1",
-              "label": "t:sections.all.colors.background_1.label"
-            },
-            {
-              "value": "background-2",
-              "label": "t:sections.all.colors.background_2.label"
-            },
-            {
-              "value": "inverse",
-              "label": "t:sections.all.colors.inverse.label"
-            }
-          ],
-          "default": "accent-1",
-          "label": "t:sections.all.colors.label"
+          "type": "announcement"
         }
       ]
     }
-  ],
-  "default": {
-    "blocks": [
-      {
-        "type": "announcement"
-      }
-    ]
   }
-}
 {% endschema %}
