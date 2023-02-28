@@ -3138,3 +3138,16 @@ details-disclosure > details {
   position: relative;
   right: -8px;
 }
+
+.swiper-button-next, .swiper-button-prev {
+  display: flex !important;
+  color: black;
+  transform: scale3d(0.3, 0.3, 0.3);
+  display: block;
+  border: none;
+  outline: none;
+}
+
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
+  opacity: 0;
+}

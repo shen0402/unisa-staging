@@ -12,6 +12,15 @@
   margin-bottom: 0;
 }
 
+.rte * {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.rte h3 {
+  text-transform: uppercase;
+}
+
 .rte table {
   table-layout: fixed;
 }

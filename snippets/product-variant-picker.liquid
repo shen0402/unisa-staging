@@ -22,9 +22,21 @@
       {{ block.shopify_attributes }}
     >
       {%- for option in product.options_with_values -%}
-        <fieldset class="js product-form__input">
-          <legend class="form__label">{{ option.name }}</legend>
-          {% render 'product-variant-options', product: product, option: option, block: block %}
+        <fieldset class="js product-form__input product-form__input--{{ option.name | downcase }}">
+          {% unless option.name == 'Size' %}
+            <legend class="form__label">{{ option.name }}</legend>
+          {% else %}
+            <legend class="form__label"><span class="option">Elige tu talla</span> <span class="right-arrow"></span></legend>
+          {% endunless %}
+          <div class="form__options-wrapper">
+            {% if option.name == 'Color' %}<div class="swiper-wrapper">{% endif %}
+            {% render 'product-variant-options', product: product, option: option, block: block %}
+            {% if option.name == 'Color' %}
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            {% endif %}
+          </div>
         </fieldset>
       {%- endfor -%}
       <script type="application/json">

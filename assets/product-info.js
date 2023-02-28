@@ -6,6 +6,26 @@ if (!customElements.get('product-info')) {
       this.currentVariant = this.querySelector('.product-variant-id');
       this.variantSelects = this.querySelector('variant-radios')
       this.submitButton = this.querySelector('[type="submit"]');
+      if (this.variantSelects.querySelector('.product-form__input--size .form__label')) {
+        const sizeVariant = this.variantSelects.querySelector('.product-form__input--size');
+        sizeVariant.querySelector('.form__label').addEventListener('click', function(e){
+          e.preventDefault();
+          e.stopPropagation();
+          this.nextElementSibling.classList.toggle('active');
+        });
+
+        sizeVariant.querySelectorAll('label').forEach(label=> {
+          label.addEventListener('click', function(){
+            const size = this.previousElementSibling.value;
+            sizeVariant.querySelector('.form__label .option').textContent = size;
+            sizeVariant.querySelector('.form__options-wrapper').classList.remove('active');
+          });
+        });
+
+        document.body.addEventListener('click', function(){
+          document.querySelector('.product-form__input--size .form__options-wrapper').classList.remove('active');
+        });
+      }
     }
 
     cartUpdateUnsubscriber = undefined;

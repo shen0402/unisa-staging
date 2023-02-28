@@ -856,6 +856,10 @@ class VariantSelects extends HTMLElement {
     if (!modalContent) return;
     const newMediaModal = modalContent.querySelector( `[data-media-id="${this.currentVariant.featured_media.id}"]`);
     modalContent.prepend(newMediaModal);
+    document.querySelectorAll('.product__media-item').forEach(media=>{
+      const color = media.getAttribute('data-media-color');
+      media.setAttribute('data-current-media', color == this.currentVariant.option1);
+    });
   }
 
   updateURL() {

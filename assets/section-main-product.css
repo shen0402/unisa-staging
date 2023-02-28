@@ -19,7 +19,7 @@
   .product__column-sticky {
     display: block;
     position: sticky;
-    top: 3rem;
+    top: 8rem;
     z-index: 2;
   }
 
@@ -59,7 +59,7 @@
   }
 
   .product--large:not(.product--no-media) .product__info-wrapper {
-    padding: 0 0 0 4rem;
+    padding: 2% 0 0 4rem;
     max-width: 35%;
     width: calc(35% - var(--grid-desktop-horizontal-spacing) / 2);
   }
@@ -162,7 +162,6 @@
   padding: 0;
   margin: 0 0 1.2rem 0;
   max-width: 37rem;
-  min-width: fit-content;
   border: none;
 }
 
@@ -177,6 +176,9 @@ variant-selects {
 
 .product-form__input .form__label {
   padding-left: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
 }
 
 fieldset.product-form__input .form__label {
@@ -278,6 +280,10 @@ fieldset.product-form__input .form__label {
 
 .product-form__submit {
   margin-bottom: 1rem;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 10px;
+  min-height: 0;
 }
 
 .no-js .product-form__submit.button--secondary {
@@ -319,9 +325,12 @@ fieldset.product-form__input .form__label {
 }
 
 .product__info-container .product-form,
-.product__info-container .product__description,
 .product__info-container .icon-with-text {
   margin: 2.5rem 0;
+}
+
+.product__info-container .product__description {
+  margin: 1rem 0;
 }
 
 .product__text {
@@ -345,6 +354,9 @@ a.product__text {
 
 .product__title > * {
   margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000;
 }
 
 .product__title > a {
@@ -357,10 +369,6 @@ a.product__text {
 
 .product__text.caption-with-letter-spacing + .product__title {
   margin-top: 0;
-}
-
-.product__accordion .accordion__content {
-  padding: 0 1rem;
 }
 
 .product .price .badge {
@@ -469,10 +477,6 @@ a.product__text {
   margin: 0 auto 1.2rem auto;
 }
 
-.product-form__buttons {
-  max-width: 44rem;
-}
-
 .product--no-media .product__info-container > modal-opener {
   display: block;
   text-align: center;
@@ -533,6 +537,7 @@ a.product__text {
 
   .product__media-list {
     padding-right: calc(var(--media-shadow-horizontal-offset) * var(--media-shadow-visible));
+    gap: 8px;
   }
 
   .product--thumbnail .product__media-item:not(.is-active),
@@ -655,11 +660,6 @@ a.product__text {
 
   .product__modal-opener .product__media-icon {
     opacity: 0;
-  }
-
-  .product__modal-opener:hover .product__media-icon,
-  .product__modal-opener:focus .product__media-icon {
-    opacity: 1;
   }
 }
 
@@ -1397,7 +1397,6 @@ a.product__text {
 
 .product-media-container.constrain-height.media-fit-contain {
   --contained-width: calc(var(--constrained-height) * var(--aspect-ratio));
-  width: min(var(--contained-width), 100%);
 }
 
 .product-media-container .media {
@@ -1456,4 +1455,160 @@ a.product__text {
   .product-media-container .product__modal-opener:not(.product__modal-opener--image) {
     display: none;
   }
+}
+
+.main-product.page-width, variant-radios .product-form__input {
+  max-width: 100%;
+}
+
+.product-form__input--color .form__label {
+  width: 50px;
+  display: block;
+  float: left;
+}
+
+.product-form__input--color {
+  display: flex;
+}
+
+.product-form__input--color .form__options-wrapper {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  padding: 0 40px;
+  margin-right: -50px;
+}
+
+.product-form__input--color .form__options-wrapper::before, .product-form__input--color .form__options-wrapper::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background-color: #fff;
+  z-index: 2;
+}
+
+.product-form__input--color .form__options-wrapper::before {
+  left: 0;
+}
+
+.product-form__input--color .form__options-wrapper::after {
+  right: 0;
+}
+
+.product-form__input--color input[type='radio'] + label {
+  background-color: transparent;
+  color: #000000;
+  font-size: 12px;
+  padding: 0 10px;
+  border-radius: 0;
+  border: none;
+}
+
+.product-form__input--color input[type='radio'] + label img {
+  width: 100%;
+  height: auto;
+}
+
+.product-form__input--color input[type='radio'] + label:before {
+  display: none;
+}
+
+.product-form__input--color input[type='radio']:checked + label {
+  background-color: transparent;
+  text-decoration: underline;
+  color: #000000;
+}
+
+.product-form__input--color .swiper-slide {
+  width: 25% !important;
+}
+
+.product-form__input--size input[type='radio'] + label, .product-form__input--size input[type='radio']:checked + label, .product-form__input--size .form__label {
+  background-color: transparent;
+  color: #000000;
+  font-size: 12px;
+  width: 100%;
+  border-radius: 0;
+  border: none;
+  display: block;
+  text-align: left;
+  padding: 8px 20px;
+  margin: 0 !important;
+  cursor: pointer;
+}
+
+.product-form__input--size .form__label {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000000;
+}
+
+.product-form__input--size .form__label .right-arrow {
+  border: solid black;
+  border-width: 0 1.5px 1.5px 0;
+  display: block;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  width: 8px;
+  height: 8px;
+  margin-left: 10px;
+  margin-top: -5px;
+}
+
+.product-form__input--size {
+  margin: 0 !important;
+  position: relative;
+}
+
+.product-form__input--size .form__options-wrapper {
+  position: absolute;
+  width: 100%;
+  display: none;
+  background-color: white;
+  z-index: 2;
+}
+
+.product-form__input--size .form__options-wrapper.active {
+  display: block;
+}
+
+.product-form__input--size .form__options-wrapper.active label {
+  border-left: 1px solid #000000 !important;
+  border-right: 1px solid #000000 !important;
+}
+
+.product-form__input--size .form__options-wrapper.active label:last-of-type {
+  border-bottom: 1px solid #000000 !important;
+}
+
+.product-form__input input[type='radio'] {
+  display: none;
+}
+
+.product-form__input--size input[type='radio'] + label:hover {
+  text-decoration: underline;
+  background-color: #ededed;
+}
+
+.product-form__input--size input[type='radio']:checked + label {
+  text-decoration: underline;
+}
+
+.product-form__input--size input[type='radio'].disabled + label:hover {
+  text-decoration: line-through;
+}
+
+.product__media-item {
+  display: none;
+}
+
+[data-current-media="true"] {
+  display: block;
+  animation: fadeIn 2s;
 }

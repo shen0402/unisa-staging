@@ -45,6 +45,9 @@
     endfor
   -%}
 
+  {% if option.name == 'Color' %}
+    <div class="swiper-slide">
+  {% endif %}
   {%- if block.settings.picker_type == 'button' -%}
     <input
       type="radio"
@@ -60,6 +63,14 @@
       {% endif %}
     >
     <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+      {% if option.name == 'Color' %}
+          {% for variant in product.variants %}
+            {% if variant.title contains value %}
+              {{ variant.image | img_url: '150x' | img_tag }}
+              {% break %}
+            {% endif %}
+          {% endfor %}
+      {% endif %}
       {{ value -}}
       <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
     </label>
@@ -77,4 +88,7 @@
       {%- endif %}
     </option>
   {%- endif -%}
+  {% if option.name == 'Color' %}
+    </div>
+  {% endif %}
 {%- endfor -%}

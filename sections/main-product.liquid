@@ -1,6 +1,6 @@
 <section
   id="MainProduct-{{ section.id }}"
-  class="page-width section-{{ section.id }}-padding"
+  class="page-width section-{{ section.id }}-padding main-product"
   data-section="{{ section.id }}"
 >
   {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
@@ -28,6 +28,7 @@
 
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'product-slider.js' | asset_url }}" defer="defer"></script>
   {% if section.settings.image_zoom == 'hover' %}
     <script id="EnableZoomOnHover-main" src="{{ 'magnify.js' | asset_url }}" defer="defer"></script>
   {% endif %}
@@ -82,11 +83,11 @@
               </p>
             {%- when 'title' -%}
               <div class="product__title" {{ block.shopify_attributes }}>
-                <h1>{{ product.title | escape }}</h1>
+                <p>{{ product.title | escape }}</p>
                 <a href="{{ product.url }}" class="product__title">
-                  <h2 class="h1">
+                  <p>
                     {{ product.title | escape }}
-                  </h2>
+                  </p>
                 </a>
               </div>
             {%- when 'price' -%}
@@ -164,8 +165,22 @@
               </p>
             {%- when 'description' -%}
               {%- if product.description != blank -%}
-                <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
-                  {{ product.description }}
+                <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
+                  <details id="Details-{{ block.id }}-{{ section.id }}">
+                    <summary>
+                      <div class="summary__title">
+                        <p class="accordion__title">
+                          Descripción
+                        </p>
+                      </div>
+                      {% render 'icon-caret' %}
+                    </summary>
+                    <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
+                      <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
+                        {{ product.description }}
+                      </div>
+                    </div>
+                  </details>
                 </div>
               {%- endif -%}
             {%- when 'sku' -%}
@@ -185,9 +200,9 @@
                   <summary>
                     <div class="summary__title">
                       {% render 'icon-accordion', icon: block.settings.icon %}
-                      <h2 class="h4 accordion__title">
+                      <p class="accordion__title">
                         {{ block.settings.heading | default: block.settings.page.title }}
-                      </h2>
+                      </p>
                     </div>
                     {% render 'icon-caret' %}
                   </summary>
@@ -433,6 +448,13 @@
               {% render 'icon-with-text',
                 block: block
               %}
+            {% when 'icon-with-text-2' %}
+              <div class="icon-with-text-2">
+                <span class="icon">
+                  {{ block.settings.icon }}
+                </span>
+                <div>{{ block.settings.text }}</div>
+              </div>
           {%- endcase -%}
         {%- endfor -%}
         <a href="{{ product.url }}" class="link product__view-details animate-arrow">
@@ -1890,6 +1912,22 @@
           "default": "Heading",
           "label": "t:sections.main-product.blocks.icon_with_text.settings.heading_3.label",
           "info": "t:sections.main-product.blocks.icon_with_text.settings.heading.info"
+        }
+      ]
+    },
+    {
+      "type": "icon-with-text-2",
+      "name": "Icon with text 2",
+      "settings": [
+        {
+          "type": "html",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
         }
       ]
     }
