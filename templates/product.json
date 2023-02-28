@@ -25,6 +25,20 @@
             "show_dynamic_checkout": false
           }
         },
+        "75a8b667-421d-45fe-9292-0dde4bab6eb6": {
+          "type": "icon-with-text-2",
+          "settings": {
+            "icon": "<img src=\"data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACy0lEQVR4nO2ZPWgUQRTHfxi9s8lFEURjpaVV6ighlZVgDAYP7QUvCYJoYRcQjAbBQhBMpRYWFoKl9iZRLmqj0fpMJIUofqAQdGXCW3is+zE7+0GK+cOD4+3b95\/\/zs68t3Pg4eHh4eFRDA3gBrAGBDXYKjArvKXiek0ConatbCGrkniYenBEzUypCMTqRCWcgRdS\/OF9slhL68Aj4LBt0jrhsjn8BMZsktaJkLNtEXsIeCLxv4GRrKR1Ii9nH\/BA7jH1bm8ZSctAEmcDmLMozk+BbbZJq0QS51yONXPFNmmVSOJcE\/\/xlHvNgv8LbABHs5JG1Ud9H1WSaOyQkAWRbdZGSGD5UG9JXA\/YkyXkLLBbDDXIHcBD4L7yj6jYPhGyrnwDJQtpAEsSey9LiFlQd4HzyncV6ADLwBnlfyZFyxgi5JfyXS5ZiMFBqS1\/5AEnCrkDnAOOKd8l4CLwFTit\/GagE2KhkC\/KN1yBEIObEj+fJmQsxrdPfj8GbicIORAjZMJywL0chVJ30h+SknaB0YjPvGYt+X0KmFax2kbFon4bITOO7cvGVtt+t4uYcGby2JYS4gIvpAz4GSn6au0ELgAvpQgZeyE7V7MIeQbPD2ARmEo5PrIWMgi8SdktXgP7SxCSxfNKYpyENFXyt8AJoF\/MFL0VRZLnwC3KacuzHMNjJWRarr2LafwQX0jSKSAkD89kUq7wgM6U+ygW5Jp5Qkk4KTHPLUUMKfK2A8+i8rXFZwro5jlsVtU0U5yElmNb4crzLeY+0w1svnOzambyEgzkHOxnaThnYjj7LXi0kJ7kMa1NKsIpTztPGs\/5ahXlWXAhmJKbVxIW4S5poQP1AVY1T8eFoCF1wiR4LwuuJTauksdti1XwdOVT2wmDiiSpUIUfXEWQxdN1KLz\/oSnTvyRtQ9g6TJb8z1MzwvNd1l6nyEx4eHh4eFAV\/gGgcgTiPE4ouQAAAABJRU5ErkJggg==\">",
+            "text": "<p>Envio estándar gratuito a partir de 69,90€<\/p>"
+          }
+        },
+        "e9d8330f-829b-4382-9816-38d391ef6a6f": {
+          "type": "icon-with-text-2",
+          "settings": {
+            "icon": "<img src=\"data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACy0lEQVR4nO2ZPWgUQRTHfxi9s8lFEURjpaVV6ighlZVgDAYP7QUvCYJoYRcQjAbBQhBMpRYWFoKl9iZRLmqj0fpMJIUofqAQdGXCW3is+zE7+0GK+cOD4+3b95\/\/zs68t3Pg4eHh4eFRDA3gBrAGBDXYKjArvKXiek0ConatbCGrkniYenBEzUypCMTqRCWcgRdS\/OF9slhL68Aj4LBt0jrhsjn8BMZsktaJkLNtEXsIeCLxv4GRrKR1Ii9nH\/BA7jH1bm8ZSctAEmcDmLMozk+BbbZJq0QS51yONXPFNmmVSOJcE\/\/xlHvNgv8LbABHs5JG1Ud9H1WSaOyQkAWRbdZGSGD5UG9JXA\/YkyXkLLBbDDXIHcBD4L7yj6jYPhGyrnwDJQtpAEsSey9LiFlQd4HzyncV6ADLwBnlfyZFyxgi5JfyXS5ZiMFBqS1\/5AEnCrkDnAOOKd8l4CLwFTit\/GagE2KhkC\/KN1yBEIObEj+fJmQsxrdPfj8GbicIORAjZMJywL0chVJ30h+SknaB0YjPvGYt+X0KmFax2kbFon4bITOO7cvGVtt+t4uYcGby2JYS4gIvpAz4GSn6au0ELgAvpQgZeyE7V7MIeQbPD2ARmEo5PrIWMgi8SdktXgP7SxCSxfNKYpyENFXyt8AJoF\/MFL0VRZLnwC3KacuzHMNjJWRarr2LafwQX0jSKSAkD89kUq7wgM6U+ygW5Jp5Qkk4KTHPLUUMKfK2A8+i8rXFZwro5jlsVtU0U5yElmNb4crzLeY+0w1svnOzambyEgzkHOxnaThnYjj7LXi0kJ7kMa1NKsIpTztPGs\/5ahXlWXAhmJKbVxIW4S5poQP1AVY1T8eFoCF1wiR4LwuuJTauksdti1XwdOVT2wmDiiSpUIUfXEWQxdN1KLz\/oSnTvyRtQ9g6TJb8z1MzwvNd1l6nyEx4eHh4eFAV\/gGgcgTiPE4ouQAAAABJRU5ErkJggg==\">",
+            "text": "<p>Envio express en 24 horas desde  7.50 €<\/p>"
+          }
+        },
         "description": {
           "type": "description",
           "settings": {
@@ -81,6 +95,8 @@
         "price",
         "a9c832fa-ad7b-4ebe-a010-54da643fc350",
         "buy_buttons",
+        "75a8b667-421d-45fe-9292-0dde4bab6eb6",
+        "e9d8330f-829b-4382-9816-38d391ef6a6f",
         "description",
         "1c9c74ee-e123-4cbd-8ebd-7f07ab4cbcf5",
         "69a724df-dbad-41a6-a9b7-2cbb01d12f82",
