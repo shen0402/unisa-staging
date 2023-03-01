@@ -5,6 +5,12 @@
   gap: 0;
 }
 
+@media (max-width: 749px) {
+  .image-banner {
+    flex-wrap: wrap !important;
+  }
+}
+
 .banner__box {
   text-align: center;
 }

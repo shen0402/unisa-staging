@@ -414,6 +414,24 @@
 }
 
 .wk-button__icon {
-  width: 15px;
-  height: 15px;
+  width: 15px !important;
+  height: 15px !important;
+}
+
+@media (max-width: 749px) {
+  .wk-button.wk-button--floating {
+    top: 10px !important;
+  }
+  .wk-button__icon {
+    width: 12px !important;
+    height: 12px !important;
+  }
+
+  .card__heading {
+    padding-right: 30px;
+  }
+
+  .full-unstyled-link {
+    font-size: 10px;
+  }
 }
