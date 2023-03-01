@@ -96,3 +96,10 @@
   text-transform: uppercase;
   color: rgba(var(--color-foreground), 0.7);
 }
+
+@media (max-width: 749px) {
+  .price .price-item {
+    font-size: 14px;
+    font-weight: 600;
+  }
+}

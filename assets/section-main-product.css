@@ -1555,6 +1555,19 @@ a.product__text {
   .swiper-button-prev {
     left: 0;
   }
+
+  .product__title {
+    margin-bottom: 0;
+  }
+
+  .product__title > * {
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .product__title + .no-js-hidden {
+    margin: 0;
+  }
 }
 
 .product-form__input--size input[type='radio'] + label, .product-form__input--size input[type='radio']:checked + label, .product-form__input--size .form__label {
@@ -1664,4 +1677,17 @@ a.product__text {
   line-height: 17px;
   margin: 0;
   color: #000000;
+}
+
+.product__media-wrapper .slider-counter__link--dots .dot {
+  background-color: #000000;
+  opacity: 0.5;
+}
+
+.product__media-wrapper .slider-counter__link--active.slider-counter__link--dots .dot {
+  opacity: 1;
+}
+
+.product__media-wrapper .slider-button {
+  display: none;
 }

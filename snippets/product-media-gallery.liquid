@@ -137,11 +137,16 @@
         >
           {% render 'icon-caret' %}
         </button>
-        <div class="slider-counter caption">
-          <span class="slider-counter--current">1</span>
-          <span aria-hidden="true"> / </span>
-          <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
-          <span class="slider-counter--total">{{ media_count }}</span>
+        <div class="slider-counter slider-counter--dots">
+          <div class="slideshow__control-wrapper">
+          {%- for i in (1..media_count) -%}
+            {% assign media_index = i | minus: 1  %}
+            {% assign color = product.media[media_index].alt | split: '-' %}
+            <button class="slider-counter__link slider-counter__link--dots link hidden" aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}" aria-controls="Slider-{{ block.id }}" data-media-color="{{ color[1] }}">
+              <span class="dot"></span>
+            </button>
+          {%- endfor -%}
+          </div>
         </div>
         <button
           type="button"

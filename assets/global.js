@@ -860,6 +860,15 @@ class VariantSelects extends HTMLElement {
       const color = media.getAttribute('data-media-color');
       media.setAttribute('data-current-media', color == this.currentVariant.option1);
     });
+
+    document.querySelectorAll('.product__media-wrapper .slider-counter__link--dots').forEach(dot => {
+      const color = dot.getAttribute('data-media-color');
+      if (color == this.currentVariant.option1) {
+        dot.classList.remove('hidden');
+      } else {
+        dot.classList.add('hidden');
+      }
+    });
   }
 
   updateURL() {

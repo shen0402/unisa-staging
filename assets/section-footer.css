@@ -813,12 +813,20 @@ noscript .localization-selector.link {
   .footer__content-bottom {
     padding-bottom: 2rem;
   }
+
+  .footer-block.footer-block--menu {
+    width: calc(100vw - 17px) !important;
+  }
 }
 
 @media (max-width: 749px) {
   .footer-block {
     margin: 0px 0px 0px -40px !important;
     padding: 2rem !important;
+  }
+
+  .footer-block, .footer-block.footer-block--menu {
+    width: 100vw !important;
   }
 }
 
