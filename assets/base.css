@@ -3182,3 +3182,7 @@ details-disclosure > details {
   width: 6px;
   height: 6px;
 }
+
+.product-grid {
+  align-items: flex-start;
+}
