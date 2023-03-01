@@ -38,31 +38,31 @@
   import templates from "{{ 'app_wishlist-king_templates.js' | asset_url }}";
   import settings from "{{ 'app_wishlist-king_settings.js' | asset_url }}";
   WishlistKing.toolkit.init({
-      templates,
-      settings,
-      events: {
-        ready() {
-          // App is ready and WishlistKing.toolkit can be used
+        templates,
+        settings,
+        events: {
+          ready() {
+            // App is ready and WishlistKing.toolkit can be used
+          },
+          addedToCart(cart) {
+            // This is a good place to trigger AJAX cart update
+            window.scrollTo(0, 0);
+            location.reload();
+          },
+          loginRequired(intent) {
+            window.location = [
+              "/account/login?wk-redirect=",
+              encodeURIComponent(
+                JSON.stringify({
+                  path: window.location.pathname,
+                  intent: intent,
+                })
+              ),
+            ].join("");
+          },
         },
-        addedToCart(cart) {
-          // This is a good place to trigger AJAX cart update
-          window.scrollTo(0, 0);
-          location.reload();
-        },
-        loginRequired(intent) {
-          window.location = [
-            "/account/login?wk-redirect=",
-            encodeURIComponent(
-              JSON.stringify({
-                path: window.location.pathname,
-                intent: intent,
-              })
-            ),
-          ].join("");
-        },
-      },
-      shop: {
-        name: {{ shop.name | replace: "&amp;", "&" | json }},
+        shop: {
+          name: {{ shop.name | replace: "&amp;", "&" | json }},
   domain: "{{ shop.domain }}",
   permanent_domain: "{{ shop.permanent_domain }}",
   currency: "{{ shop.currency }}",
@@ -70,23 +70,23 @@
   root_url: "{% unless routes.root_url == '/' %}
     {{ routes.root_url }}{% endunless %}",
   },
-      session: {
-        customer: {{ customer.id | json }},
+        session: {
+          customer: {{ customer.id | json }},
   customer_email: {{ customer.email | json }},
   },
-      wishlist: {
-        filter: function (product) {
-          return !product.hidden;
-        },
-        share: {
-          title: {{ "app_wishlist-king.general.share_list_title" | t | json }},
+        wishlist: {
+          filter: function (product) {
+            return !product.hidden;
+          },
+          share: {
+            title: {{ "app_wishlist-king.general.share_list_title" | t | json }},
   description: {{ "app_wishlist-king.general.share_list_description" | t: shopName: shop.name | json }},
   },
-        fallbackImage: "https://cdn.shopify.com/s/images/themes/product-1.png",
-      },
-      theme: {
-        locale: {
-          wishlist: {{ "app_wishlist-king.general.wishlist" | t | json }},
+          fallbackImage: "https://cdn.shopify.com/s/images/themes/product-1.png",
+        },
+        theme: {
+          locale: {
+            wishlist: {{ "app_wishlist-king.general.wishlist" | t | json }},
   wishlist_empty_note: {{ "app_wishlist-king.general.wishlist_empty_note" | t | json }},
   add_to_wishlist: {{ "app_wishlist-king.general.add_to_wishlist" | t | json }},
   remove_from_wishlist: {{ "app_wishlist-king.general.remove_from_wishlist" | t | json }},
@@ -111,79 +111,79 @@
   send_to_customer_service: {{ "app_wishlist-king.general.send_to_customer_service" | t | json }},
   add_all_to_cart: {{ "app_wishlist-king.general.add_all_to_cart" | t | json }},
   },
-        customer: {{ customer.id | json }},
+          customer: {{ customer.id | json }},
   customer_accounts_enabled: {{ shop.customer_accounts_enabled | json }},
   },
-    });
-    // Header link
-    WishlistKing.observe(
-      {
-        selector: "header a[href='{{ routes.cart_url }}']",
+      });
+      // Header link
+      WishlistKing.observe(
+        {
+          selector: "header a[href='{{ routes.cart_url }}']",
   },
-      (target) => {
-        target.insertBefore(WishlistKing.createComponent("wishlist-link"));
-      }
-    );
-    // Wishlist button on product page
-    WishlistKing.observe(
-      {
-        selector: "form[action='{{ routes.cart_add_url }}']",
+        (target) => {
+          target.insertBefore(WishlistKing.createComponent("wishlist-link"));
+        }
+      );
+      // Wishlist button on product page
+      WishlistKing.observe(
+        {
+          selector: "form[action='{{ routes.cart_add_url }}']",
   template: "product",
-      },
-      (target) => {
-        target.append(
-          WishlistKing.createComponent("wishlist-button", {
-            id: "{{ product.id }}",
-  })
-        );
-      }
-    );
-    // Wishlist button on collection page
-    WishlistKing.observe(
-      {
-        selector: "[data-product-id]",
-        template: "collection",
-      },
-      (target) => {
-        target.append(
-          WishlistKing.createComponent("wishlist-button-floating", {
-            id: target.container.getAttribute("data-product-id"),
-          })
-        );
-      }
-    );
-    // Wishlist page
-    WishlistKing.observe(
-      {
-        selector: "main .rte",
-        template: "wishlist",
-      },
-      (target) => {
-        target.insertAfter(WishlistKing.createComponent("wishlist-page"));
-      }
-    );
-    // Shared wishlist page
-    WishlistKing.observe(
-      {
-        selector: "main .rte",
-        template: "shared-wishlist",
-      },
-      (target) => {
-        target.insertAfter(WishlistKing.createComponent("wishlist-page-shared"));
-      }
-    );
-    // Wishlist button (floating)
-    WishlistKing.observe(
-      {
-          // Adjust the selector to target the grid item
-          selector: ".product__card[data-product-id]",
-      },
-      (target) => {
+        },
+        (target) => {
           target.append(
-          WishlistKing.createComponent("wishlist-button-floating", {
-              // Get product id from data attribute
-              id: target.container.getAttribute("data-product-id"),
-          })
+            WishlistKing.createComponent("wishlist-button", {
+              id: "{{ product.id }}",
+  })
           );
-      }
-      );</script>
+        }
+      );
+      // Wishlist button on collection page
+      WishlistKing.observe(
+        {
+          selector: "[data-product-id]",
+          template: "collection",
+        },
+        (target) => {
+          target.append(
+            WishlistKing.createComponent("wishlist-button-floating", {
+              id: target.container.getAttribute("data-product-id"),
+            })
+          );
+        }
+      );
+      // Wishlist page
+      WishlistKing.observe(
+        {
+          selector: "main .rte",
+          template: "wishlist",
+        },
+        (target) => {
+          target.insertAfter(WishlistKing.createComponent("wishlist-page"));
+        }
+      );
+      // Shared wishlist page
+      WishlistKing.observe(
+        {
+          selector: "main .rte",
+          template: "shared-wishlist",
+        },
+        (target) => {
+          target.insertAfter(WishlistKing.createComponent("wishlist-page-shared"));
+        }
+      );
+      // Wishlist button (floating)
+      WishlistKing.observe(
+        {
+            // Adjust the selector to target the grid item
+            selector: ".card__information[data-product-id]",
+        },
+        (target) => {
+            target.append(
+            WishlistKing.createComponent("wishlist-button-floating", {
+                // Get product id from data attribute
+                id: target.container.getAttribute("data-product-id"),
+            })
+            );
+        }
+        );</script>

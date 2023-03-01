@@ -94,7 +94,7 @@
 
 .card__media {
   margin: var(--image-padding);
-  width: calc(100% - 2 * var(--image-padding));
+  width: 100%;
 }
 
 .card--standard .card__media {
@@ -125,6 +125,7 @@
 .card__information {
   grid-row-start: 2;
   padding: 1.3rem 1rem;
+  position: relative;
 }
 
 .card:not(.ratio) > .card__content {
@@ -405,4 +406,14 @@
 
 .card__content {
   padding-bottom: 20px !important;
+}
+
+.wk-button.wk-button--floating {
+  top: 15px !important;
+  right: 0 !important;
+}
+
+.wk-button__icon {
+  width: 15px;
+  height: 15px;
 }
