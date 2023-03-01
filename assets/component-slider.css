@@ -70,6 +70,17 @@ slider-component {
   --shadow-padding-top: 0;
   --shadow-padding-bottom: 0;
   scroll-snap-align: unset;
+  max-width: 100%;
+}
+
+.featured-collection .card-wrapper {
+  padding: 0 14px;
+}
+
+@media (max-width: 749px) {
+  .featured-collection .card-wrapper {
+    padding: 0 6px;
+  }
 }
 
 @media screen and (min-width: 750px) {

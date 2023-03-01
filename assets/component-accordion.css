@@ -64,6 +64,25 @@
   max-width: 100%;
 }
 
+@media (max-width: 749px) {
+  .accordion {
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+  }
+
+  .accordion summary {
+    padding: 2rem 0;
+  }
+
+  .accordion__title {
+    font-weight: 500;
+  }
+
+  .accordion details[open] .accordion__content {
+    margin-bottom: 2rem;
+  }
+}
+
 @keyframes slideDown {
   0% {max-height: 0;}
   100% {max-height: 100%;}

@@ -25,6 +25,10 @@
   font-weight: 600;
 }
 
+.card-information .price .price-item {
+  font-size: 14px;
+}
+
 .price__regular .price-item--regular {
   margin-right: 0;
 }
@@ -101,5 +105,9 @@
   .price .price-item {
     font-size: 14px;
     font-weight: 600;
+  }
+
+  .card-information .price .price-item {
+    font-weight: 500;
   }
 }

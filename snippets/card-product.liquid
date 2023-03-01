@@ -330,6 +330,23 @@
             </span>
           {%- endif -%}
         </div>
+        {% for option in card_product.options_with_values %}
+          {% if option.name == 'Color' %}
+            <div class="card-has-color">
+              + colors
+            </div>
+          {% elsif option.name == 'Size' %}
+            <div class="product-data-sizes">
+              {% for value in option.values %}
+                {% for variant in card_product.variants %}
+                  {% if variant.options contains card_product.selected_or_first_available_variant.option1 and variant.options contains value %}
+                    <a class="size {% unless variant.available %}disabled{% endunless %}" href="{{ variant.url }}">{{ value }}</a>
+                  {% endif %}
+                {% endfor %}
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endfor %}
       </div>
     </div>
   </div>

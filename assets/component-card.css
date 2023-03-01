@@ -334,6 +334,7 @@
 
 .card-information > .price {
   color: rgb(var(--color-foreground));
+  margin-top: 0 !important;
 }
 
 .card--horizontal .card-information > .price {
@@ -356,4 +357,52 @@
 
 .card-article-info {
   margin-top: 1rem;
+}
+
+.card-has-color, .product-data-sizes {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  z-index: 3;
+}
+
+.card-has-color {
+  margin-top: 0 !important;
+  text-decoration: underline;
+  font-size: 13px;
+  bottom: 20px;
+  width: auto;
+  cursor: pointer;
+}
+
+.product-data-sizes {
+  margin-top: 0 !important;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-data-sizes .size {
+  padding: 3px;
+  font-size: 11px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000000;
+}
+
+.product-data-sizes .size:hover {
+  text-decoration: underline;
+}
+
+.product-data-sizes .disabled {
+  cursor: default;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.product-data-sizes .disabled:hover {
+  text-decoration: none;
+}
+
+.card__content {
+  padding-bottom: 20px !important;
 }
