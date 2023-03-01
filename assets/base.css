@@ -3059,12 +3059,12 @@ details-disclosure > details {
   }
 }
 
-.rich-text__heading, .image-with-text__heading {
+.rich-text__heading, .image-with-text__heading, .related-products__heading {
   position: relative;
   padding-bottom: 20px;
 }
 
-.rich-text__heading::before , .image-with-text__heading::before {
+.rich-text__heading::before, .image-with-text__heading::before, .related-products__heading::before {
   content: "";
   bottom: 0;
   height: 2px !important;
