@@ -147,6 +147,7 @@ slider-component {
 .slider.slider--everywhere .slider__slide {
   margin-bottom: 0;
   scroll-snap-align: center;
+  height: 100%;
 }
 
 @media screen and (min-width: 990px) {
@@ -402,4 +403,9 @@ slider-component {
 
 .slider-button--prev:not([disabled]):hover .icon {
   transform: rotate(90deg) scale(1.1);
+}
+
+.banner-swiper {
+  overflow: hidden;
+  position: relative;
 }
