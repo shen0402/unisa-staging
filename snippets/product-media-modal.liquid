@@ -26,32 +26,50 @@
       {% render 'icon-close' %}
     </button>
 
-    <div
-      class="product-media-modal__content color-background-1 gradient"
-      role="document"
-      aria-label="{{ 'products.modal.label' | t }}"
-      tabindex="0"
-    >
-      {%- liquid
-        if product.selected_or_first_available_variant.featured_media != null
-          assign media = product.selected_or_first_available_variant.featured_media
-          render 'product-media', media: media, loop: section.settings.enable_video_looping, variant_image: section.settings.hide_variants
-        endif
-      -%}
-
-      {%- for media in product.media -%}
-        {%- liquid
-          if section.settings.hide_variants and variant_images contains media.src or variant_images contains media.id
-            assign variant_image = true
-          else
-            assign variant_image = false
-          endif
-
-          unless media.id == product.selected_or_first_available_variant.featured_media.id
-            render 'product-media', media: media, loop: section.settings.enable_video_looping, variant_image: variant_image
-          endunless
-        -%}
-      {%- endfor -%}
-    </div>
+    {% assign current_color = product.selected_or_first_available_variant.featured_media.alt | split: '-' %}
+    {% for option in product.options_with_values %}
+      {% if option.name == 'Color' %}
+        {% for value in option.values %}
+          <div
+            class="product-media-modal__content color-background-1 gradient product-media-modal__swiper--{{ forloop.index0 }}"
+            role="document"
+            aria-label="{{ 'products.modal.label' | t }}"
+            tabindex="0"
+            data-media-color="{{ value }}"
+            data-current-media="{% if value == current_color[1] %}true{% else %}false{% endif %}"
+          >
+            <div class="swiper-wrapper">
+              {%- liquid
+                if product.selected_or_first_available_variant.featured_media != null
+                  assign media = product.selected_or_first_available_variant.featured_media
+                  if media.alt contains value
+                    render 'product-media', media: media, loop: section.settings.enable_video_looping, variant_image: section.settings.hide_variants, slider: true
+                  endif
+                endif
+              -%}
+      
+              {%- for media in product.media -%}
+                {%- liquid
+                  if section.settings.hide_variants and variant_images contains media.src or variant_images contains media.id
+                    assign variant_image = true
+                  else
+                    assign variant_image = false
+                  endif
+      
+                  unless media.id == product.selected_or_first_available_variant.featured_media.id
+                    if media.alt contains value
+                      render 'product-media', media: media, loop: section.settings.enable_video_looping, variant_image: variant_image, slider: true
+                    endif
+                  endunless
+                -%}
+              {%- endfor -%}
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
   </div>
 </product-modal>

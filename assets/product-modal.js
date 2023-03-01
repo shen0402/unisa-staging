@@ -9,26 +9,31 @@ if (!customElements.get('product-modal')) {
     }
 
     show(opener) {
-      super.show(opener);
-      this.showActiveMedia();
+      if (window.innerWidth > 750) {
+        super.show(opener);
+        const currentMediaId = opener.getAttribute('data-media-id');
+
+        document.querySelector(`.product-media-modal__content[data-current-media="true"]`).querySelectorAll('.product-media-modal-img').forEach((img, index)=>{
+          if (img.getAttribute('data-media-id') == currentMediaId) {
+            document.querySelector(`.product-media-modal__content[data-current-media="true"]`).querySelector(`.swiper-pagination-bullet:nth-of-type(${index+1})`).click();
+          }
+        });
+      }      
     }
+  });
 
-    showActiveMedia() {
-      this.querySelectorAll(`[data-media-id]:not([data-media-id="${this.openedBy.getAttribute("data-media-id")}"])`).forEach((element) => {
-          element.classList.remove('active');
-        }
-      )
-      const activeMedia = this.querySelector(`[data-media-id="${this.openedBy.getAttribute("data-media-id")}"]`);
-      const activeMediaTemplate = activeMedia.querySelector('template');
-      const activeMediaContent = activeMediaTemplate ? activeMediaTemplate.content : null;
-      activeMedia.classList.add('active');
-      activeMedia.scrollIntoView();
-
-      const container = this.querySelector('[role="document"]');
-      container.scrollLeft = (activeMedia.width - container.clientWidth) / 2;
-
-      if (activeMedia.nodeName == 'DEFERRED-MEDIA' && activeMediaContent && activeMediaContent.querySelector('.js-youtube'))
-        activeMedia.loadContent();
-    }
+  document.querySelectorAll('.product-media-modal__content').forEach((modal, index)=>{
+    var swiper = new Swiper(`.product-media-modal__swiper--${index}`, {
+      slidesPerView: 1,
+      spaceBetween: 50,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
+      navigation : {
+          nextEl : ".swiper-button-next",
+          prevEl : ".swiper-button-prev",
+      }
+    });
   });
 }

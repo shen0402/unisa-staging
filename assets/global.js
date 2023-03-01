@@ -484,11 +484,7 @@ class ModalDialog extends HTMLElement {
     this.addEventListener('keyup', (event) => {
       if (event.code.toUpperCase() === 'ESCAPE') this.hide();
     });
-    if (this.classList.contains('media-modal')) {
-      this.addEventListener('pointerup', (event) => {
-        if (event.pointerType === 'mouse' && !event.target.closest('deferred-media, product-model')) this.hide();
-      });
-    } else {
+    if (!this.classList.contains('media-modal')) {
       this.addEventListener('click', (event) => {
         if (event.target === this) this.hide();
       });
@@ -852,23 +848,26 @@ class VariantSelects extends HTMLElement {
     const mediaGalleries = document.querySelectorAll(`[id^="MediaGallery-${this.dataset.section}"]`);
     mediaGalleries.forEach(mediaGallery => mediaGallery.setActiveMedia(`${this.dataset.section}-${this.currentVariant.featured_media.id}`, true));
 
-    const modalContent = document.querySelector(`#ProductModal-${this.dataset.section} .product-media-modal__content`);
-    if (!modalContent) return;
-    const newMediaModal = modalContent.querySelector( `[data-media-id="${this.currentVariant.featured_media.id}"]`);
-    modalContent.prepend(newMediaModal);
     document.querySelectorAll('.product__media-item').forEach(media=>{
       const color = media.getAttribute('data-media-color');
       media.setAttribute('data-current-media', color == this.currentVariant.option1);
     });
 
-    document.querySelectorAll('.product__media-wrapper .slider-counter__link--dots').forEach(dot => {
-      const color = dot.getAttribute('data-media-color');
-      if (color == this.currentVariant.option1) {
+    document.querySelectorAll('.product-media-modal__content').forEach(media=>{
+      const color = media.getAttribute('data-media-color');
+      media.setAttribute('data-current-media', color == this.currentVariant.option1);
+    });
+
+    const currentMediaCount = document.querySelectorAll(`.product__media-wrapper .slider-counter__link--dots[data-media-color="${this.currentVariant.option1}"]`).length;
+
+    document.querySelectorAll('.product__media-wrapper .slider-counter__link--dots').forEach((dot, index) => {
+      if (index < currentMediaCount) {
         dot.classList.remove('hidden');
       } else {
         dot.classList.add('hidden');
       }
     });
+
   }
 
   updateURL() {
