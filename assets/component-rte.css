@@ -13,12 +13,16 @@
 }
 
 .rte * {
-  font-size: 12px;
-  line-height: 16px;
+  font-size: 16px;
+  line-height: 18px;
 }
 
 .rte h3 {
   text-transform: uppercase;
+}
+
+.product__info-wrapper .rte * {
+  font-size: 12px;
 }
 
 .rte table {

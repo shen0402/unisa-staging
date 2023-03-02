@@ -177,7 +177,6 @@ variant-selects {
 .product-form__input .form__label {
   padding-left: 0;
   font-size: 16px;
-  font-weight: 500;
   color: #000000;
 }
 
@@ -357,7 +356,6 @@ a.product__text {
 .product__title > * {
   margin: 0;
   font-size: 20px;
-  font-weight: 400;
   color: #000000;
 }
 
@@ -1555,7 +1553,6 @@ a.product__text {
 
   .product__title > * {
     font-size: 15px;
-    font-weight: 400;
   }
 
   .product__title + .no-js-hidden {

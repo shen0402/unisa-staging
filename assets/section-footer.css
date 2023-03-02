@@ -729,6 +729,10 @@ noscript .localization-selector.link {
   display: none;
 }
 
+.footer-block__social-heading {
+  font-family: "Playfair Display", serif !important;
+}
+
 @media (max-width: 989px) {
   .footer {
     border-top: none;

@@ -384,4 +384,12 @@
   .image-with-text__text {
     max-width: 100%;
   }
+
+  .image-with-text .link {
+    font-size: 12px;
+  }
+}
+
+.image-with-text .rte p {
+  font-size: 14px;
 }
