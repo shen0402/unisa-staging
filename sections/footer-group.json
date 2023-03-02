@@ -12,6 +12,12 @@
             "heading_size": "h2"
           }
         },
+        "31112204-1fe9-4ea1-8337-25333685d45b": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "<p>Suscríbete a nuestra newsletter y disfruta de ventajas como ofertas especiales, descuentos y las últimas novedades.<\/p>"
+          }
+        },
         "sections--18055964786999__db773099-9320-427e-9729-bf2c3e5393d9-1676567865ff140c17-1": {
           "type": "paragraph",
           "settings": {
@@ -26,6 +32,7 @@
       },
       "block_order": [
         "sections--18055964786999__db773099-9320-427e-9729-bf2c3e5393d9-1676567865ff140c17-0",
+        "31112204-1fe9-4ea1-8337-25333685d45b",
         "sections--18055964786999__db773099-9320-427e-9729-bf2c3e5393d9-1676567865ff140c17-1",
         "sections--18055964786999__db773099-9320-427e-9729-bf2c3e5393d9-1676567865ff140c17-2"
       ],
