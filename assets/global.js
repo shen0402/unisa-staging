@@ -850,15 +850,16 @@ class VariantSelects extends HTMLElement {
 
     document.querySelectorAll('.product__media-item').forEach(media=>{
       const color = media.getAttribute('data-media-color');
-      media.setAttribute('data-current-media', color == this.currentVariant.option1);
+      console.log(color);
+      media.setAttribute('data-current-media', color == this.currentVariant.featured_media.alt);
     });
 
     document.querySelectorAll('.product-media-modal__content').forEach(media=>{
       const color = media.getAttribute('data-media-color');
-      media.setAttribute('data-current-media', color == this.currentVariant.option1);
+      media.setAttribute('data-current-media', color == this.currentVariant.featured_media.alt);
     });
 
-    const currentMediaCount = document.querySelectorAll(`.product__media-wrapper .slider-counter__link--dots[data-media-color="${this.currentVariant.option1}"]`).length;
+    const currentMediaCount = document.querySelectorAll(`.product__media-wrapper .slider-counter__link--dots[data-media-color="${this.currentVariant.featured_media.alt}"]`).length;
 
     document.querySelectorAll('.product__media-wrapper .slider-counter__link--dots').forEach((dot, index) => {
       if (index < currentMediaCount) {
