@@ -13,7 +13,7 @@
     "gradient_background_1": "radial-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 100%)",
     "colors_background_2": "#ffffff",
     "gradient_background_2": "",
-    "type_header_font": "playfair_display_n7",
+    "type_header_font": "playfair_display_n4",
     "heading_scale": 100,
     "type_body_font": "montserrat_n5",
     "body_scale": 100,
