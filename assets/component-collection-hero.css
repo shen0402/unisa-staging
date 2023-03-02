@@ -24,9 +24,14 @@
   flex-basis: 100%;
 }
 
+.collection-hero {
+  margin-top: 2rem;
+}
+
 @media screen and (min-width: 750px) {
   .collection-hero {
     padding: 0;
+    margin-top: 4rem;
   }
 
   .collection-hero__inner {
@@ -37,7 +42,9 @@
 }
 
 .collection-hero__title {
-  margin: 2.5rem 0;
+  margin: 0;
+  font-size: 28px;
+  text-align: center;
 }
 
 .collection-hero__title + .collection-hero__description {
@@ -61,6 +68,16 @@
   .collection-hero--with-image .collection-hero__description {
     max-width: 100%;
   }
+}
+
+.collection-hero__description {
+  margin: 0 auto !important;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.collection-hero__description.rte * {
+  font-size: 14px;
 }
 
 .collection-hero--with-image .collection-hero__title {

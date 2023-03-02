@@ -265,3 +265,41 @@ class FacetRemove extends HTMLElement {
 }
 
 customElements.define('facet-remove', FacetRemove);
+
+document.querySelector('.facet-filters__label').addEventListener('click', function(e){
+  e.preventDefault();
+  e.stopPropagation();
+  document.querySelector('.facet-filters__field .select').classList.toggle('active');
+});
+
+function closeSortDropdown() {
+  document.querySelector('.facet-filters__field .select').classList.remove('active');
+}
+
+document.body.addEventListener('click', function(){
+  closeSortDropdown();
+});
+
+document.querySelector('.facet-filters__sort-close').addEventListener('click', function(){
+  closeSortDropdown();
+});
+
+document.querySelectorAll('.facet-filters__sort-dropdown span').forEach(label=> {
+  let _label = label;
+  label.addEventListener('click', function(){
+    const sort = this.getAttribute('data-value');
+    if (sort) {
+      document.querySelectorAll('.facet-filters__sort-dropdown span').forEach(label=>{
+        if (label == _label) {
+          label.classList.add('selected');
+        } else {
+          label.classList.remove('selected');
+        }
+      });
+
+      document.querySelector(`.facet-filters__sort option[value="${sort}"]`).selected = 'selected';
+    }
+
+    closeSortDropdown();
+  });
+});

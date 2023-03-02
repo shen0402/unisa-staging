@@ -977,11 +977,26 @@
       <form id="FacetSortDrawerForm" class="facets__form">
         <div class="facet-filters sorting caption small-hide">
           <div class="facet-filters__field">
+            <span class="filter-sort">|</span>
             <h2 class="facet-filters__label caption-large text-body">
               <label for="SortBy">{{ 'products.facets.sort_by_label' | t }}</label>
             </h2>
             <div class="select">
               {%- assign sort_by = results.sort_by | default: results.default_sort_by -%}
+              <div class="facet-filters__sort-dropdown">
+                <span class="facet-filters__sort-close">
+                </span>
+                {%- for option in results.sort_options -%}
+                  <span
+                    data-value="{{ option.value | escape }}"
+                    {% if option.value == sort_by %}
+                      class="selected"
+                    {% endif %}
+                  >
+                    {{ option.name | escape }}
+                  </span>
+                {%- endfor -%}
+              </div>
               <select
                 name="sort_by"
                 class="facet-filters__sort select__select caption-large"
@@ -999,7 +1014,6 @@
                   </option>
                 {%- endfor -%}
               </select>
-              {% render 'icon-caret' %}
             </div>
           </div>
 
