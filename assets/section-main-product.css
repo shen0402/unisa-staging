@@ -350,6 +350,8 @@ a.product__text {
 .product__title {
   word-break: break-word;
   margin-bottom: 1.5rem;
+  position: relative;
+  padding-right: 30px;
 }
 
 .product__title > * {

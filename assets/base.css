@@ -3186,3 +3186,23 @@ details-disclosure > details {
 .product-grid {
   align-items: flex-start;
 }
+
+.product-form .wk-button  {
+  display: none;
+}
+
+.product__wk-wrapper {
+  position: absolute;
+  top: 4px;
+  right: 0;
+}
+
+.product__wk-wrapper .wk-button {
+  padding: 0;
+}
+
+.product__wk-wrapper .wk-button__icon {
+  margin: 0;
+  width: 12px !important;
+  height: 12px !important;
+}

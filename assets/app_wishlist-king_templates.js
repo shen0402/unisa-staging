@@ -66,7 +66,6 @@ const templates = [
   
         <button type="button" class="wk-button wk-button--{{ btn_action }} {{ addClass }}" title="{{ btn_title }}" data-wk-{{ btn_action }}-{{ scope }}="{{ targetId }}">
           <div class="wk-icon wk-button__icon">{% include icon_name %}</div>
-          <span class="wk-button__label">{{ btn_text }}</span>
         </button>
       `,
     },
