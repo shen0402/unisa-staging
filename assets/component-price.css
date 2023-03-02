@@ -22,7 +22,7 @@
   display: inline-block;
   margin: 0 1rem 0 0;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .card-information .price .price-item {
@@ -104,10 +104,10 @@
 @media (max-width: 749px) {
   .price .price-item {
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 400;
   }
 
   .card-information .price .price-item {
-    font-weight: 500;
+    font-weight: 400;
   }
 }
