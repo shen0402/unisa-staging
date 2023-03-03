@@ -209,6 +209,9 @@
                   <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
                     {{ block.settings.content }}
                     {{ block.settings.page.content }}
+                    {% if block.settings.enable_social %}
+                      {%- render 'social-icons' -%}
+                    {% endif %}
                   </div>
                 </details>
               </div>
@@ -803,6 +806,12 @@
           "default": "Collapsible row",
           "info": "t:sections.main-product.blocks.collapsible_tab.settings.heading.info",
           "label": "t:sections.main-product.blocks.collapsible_tab.settings.heading.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_social",
+          "label": "Enable social",
+          "default": false
         },
         {
           "type": "select",

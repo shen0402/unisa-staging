@@ -1,7 +1,9 @@
 <ul class="footer__list-social list-unstyled list-social">
   {%- if settings.social_whatsapp_link != blank -%}
     <li class="list-social__item medium-hide large-up-hide">
-      <a href="{{ settings.social_whatsapp_link }}" class="link list-social__link">
+      {% assign number = settings.social_whatsapp_link | replace: '+', '' %}
+      {% assign whatsapp_link = 'https://api.whatsapp.com/send/?phone=' %}
+      <a href="{{ whatsapp_link | append: number  }}" class="link list-social__link">
         {%- render 'icon-whatsapp' -%}
         <span class="visually-hidden">Whatsapp</span>
       </a>
