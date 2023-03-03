@@ -357,6 +357,7 @@ a.product__text {
   margin: 0;
   font-size: 20px;
   color: #000000;
+  font-weight: bold;
 }
 
 .product__title > a {
@@ -397,10 +398,6 @@ a.product__text {
 @media screen and (min-width: 750px) {
   .product__info-container {
     max-width: 60rem;
-  }
-
-  .product__info-container .price--on-sale .price-item--regular {
-    font-size: 1.6rem;
   }
 
   .product__info-container > *:first-child {

@@ -1409,6 +1409,12 @@
       },
       {
         "type": "text",
+        "id": "social_whatsapp_link",
+        "label": "WhatsApp Number",
+        "info": "+11111111111"
+      },
+      {
+        "type": "text",
         "id": "social_facebook_link",
         "label": "t:settings_schema.social-media.settings.social_facebook_link.label",
         "info": "t:settings_schema.social-media.settings.social_facebook_link.info"
