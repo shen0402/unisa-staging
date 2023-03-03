@@ -1719,3 +1719,9 @@ a.product__text {
   left: 0;
   width: 100%;
 }
+
+@media (max-width: 749px) {
+  .product__accordion .footer__list-social {
+    display: flex !important;
+  }
+}

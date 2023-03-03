@@ -49,13 +49,7 @@
 .accordion__content {
   word-break: break-word;
   overflow-x: auto;
-  max-height: 0;
-  animation: slideUp 2s;
-}
-
-.accordion details[open] .accordion__content {
-  max-height: 100%;
-  animation: slideDown 2s;
+  position: relative;
 }
 
 .accordion__content img {
@@ -79,14 +73,4 @@
   .accordion details[open] .accordion__content {
     margin-bottom: 2rem;
   }
-}
-
-@keyframes slideDown {
-  0% {max-height: 0;}
-  100% {max-height: 100%;}
-}
-
-@keyframes slideUp {
-  0% {max-height: 100%;}
-  100% {max-height: 0;}
 }
