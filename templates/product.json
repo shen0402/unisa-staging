@@ -48,6 +48,7 @@
           "type": "collapsible_tab",
           "settings": {
             "heading": "Composición",
+            "enable_social": false,
             "icon": "none",
             "content": "<p>Altura plataforma: 2,5 cm<br\/>Altura tacón: 4 cm<br\/>Material exterior: Piel <a href=\"#\" title=\"#\"><strong>+info<\/strong><\/a><br\/>Material interior: Piel\/Tejido<br\/>Puntera: Redonda<br\/>Suela: Sintético antideslizante<br\/>Color: HOLM (Verde)<\/p>",
             "page": ""
@@ -57,6 +58,7 @@
           "type": "collapsible_tab",
           "settings": {
             "heading": "Envíos",
+            "enable_social": false,
             "icon": "none",
             "content": "<p>Envío Estándar: 2 días laborables<br\/>Envío Express: 24 horas<br\/><br\/>Puedes consultar los gastos de envío en la siguiente tabla: <a href=\"#\" title=\"#\">Consúltalo aquí.<\/a><br\/><br\/>En cualquier caso, durante el proceso de compra y antes de realizar el pago te detallamos los gastos de envío.<br\/><br\/>Nuestro compromiso con el planeta también está presente en nuestros envíos. Todas las cajas de nuestros pedidos son de cartón 100% reciclado y reutilizable. Unisa ❤ the planet<br\/><br\/>*Para Canarias, Ceuta y Melilla consulta las opciones de envío<\/p>",
             "page": ""
@@ -66,6 +68,7 @@
           "type": "collapsible_tab",
           "settings": {
             "heading": "Devoluciones",
+            "enable_social": false,
             "icon": "none",
             "content": "<p>Tranquila\/o, si no estás satisfecha\/o puedes devolver tus Unisas sin coste alguno (siempre que el producto no esté usado o dañado). El plazo de devolución es de 30 días. (<a href=\"#\" title=\"#\">Más información<\/a>)<br\/><br\/>Si quieres devolver recuerda conservar la caja en la que te enviamos tu pedido. Todos nuestros envases son ecológicos y reutilizables. Unisa ❤ <em>the planet<\/em><br\/><br\/>*Para Canarias, Ceuta, Melilla consulta las opciones de devolución.<\/p>",
             "page": ""
@@ -75,6 +78,7 @@
           "type": "collapsible_tab",
           "settings": {
             "heading": "¿necesitas ayuda?",
+            "enable_social": false,
             "icon": "none",
             "content": "<p>Para cualquier duda puedes consultar nuestras<a href=\"#\" title=\"#\"> preguntas frecuentes<\/a>.Si necesitas contactar con nosotros, puedes enviarnos un e-mail a <a href=\"mailto:shoponline@unisa-europa.com\" title=\"mailto:shoponline@unisa-europa.com\">shoponline@unisa-europa.com<\/a> o llamarnos gratis al <a href=\"tel:900400440\" title=\"tel:900400440\">900 400 440<\/a><\/p>",
             "page": ""
@@ -84,6 +88,7 @@
           "type": "collapsible_tab",
           "settings": {
             "heading": "Compartir",
+            "enable_social": true,
             "icon": "none",
             "content": "",
             "page": ""
